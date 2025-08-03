@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Flowcharts - Basic Syntax | Geeno&#39;s Docs</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/docs/img/apple-touch-icon-152x152.png">
+    <link rel="manifest" href="/docs/manifest.json">
+    <link rel="apple-touch-icon" href="/docs/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/docs/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/docs/assets/css/0.styles.684dd12f.css" as="style"><link rel="preload" href="/docs/assets/js/app.e2bd7cff.js" as="script"><link rel="preload" href="/docs/assets/js/2.e252a344.js" as="script"><link rel="preload" href="/docs/assets/js/44.25c83621.js" as="script"><link rel="preload" href="/docs/assets/js/3.cd7f7020.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.ab46e7c8.js"><link rel="prefetch" href="/docs/assets/js/11.bdd1bcbb.js"><link rel="prefetch" href="/docs/assets/js/12.7b4de923.js"><link rel="prefetch" href="/docs/assets/js/13.37bccccc.js"><link rel="prefetch" href="/docs/assets/js/14.ccde06f7.js"><link rel="prefetch" href="/docs/assets/js/15.b23050ba.js"><link rel="prefetch" href="/docs/assets/js/16.4d12f0d2.js"><link rel="prefetch" href="/docs/assets/js/17.861e12b5.js"><link rel="prefetch" href="/docs/assets/js/18.f0faa1d7.js"><link rel="prefetch" href="/docs/assets/js/19.0834b430.js"><link rel="prefetch" href="/docs/assets/js/20.72656569.js"><link rel="prefetch" href="/docs/assets/js/21.8ca58c04.js"><link rel="prefetch" href="/docs/assets/js/22.234b0a3f.js"><link rel="prefetch" href="/docs/assets/js/23.66c53c46.js"><link rel="prefetch" href="/docs/assets/js/24.5d15bf02.js"><link rel="prefetch" href="/docs/assets/js/25.d5fdf813.js"><link rel="prefetch" href="/docs/assets/js/26.d33c7f1e.js"><link rel="prefetch" href="/docs/assets/js/27.1a1589e4.js"><link rel="prefetch" href="/docs/assets/js/28.786bd896.js"><link rel="prefetch" href="/docs/assets/js/29.bd546282.js"><link rel="prefetch" href="/docs/assets/js/30.c5eb2db5.js"><link rel="prefetch" href="/docs/assets/js/31.7205f0f5.js"><link rel="prefetch" href="/docs/assets/js/32.4466c93b.js"><link rel="prefetch" href="/docs/assets/js/33.b47c7c80.js"><link rel="prefetch" href="/docs/assets/js/34.7bbdcb5f.js"><link rel="prefetch" href="/docs/assets/js/35.0028dd26.js"><link rel="prefetch" href="/docs/assets/js/36.7d36e51d.js"><link rel="prefetch" href="/docs/assets/js/37.3f983ca7.js"><link rel="prefetch" href="/docs/assets/js/38.04299ecf.js"><link rel="prefetch" href="/docs/assets/js/39.46bf1693.js"><link rel="prefetch" href="/docs/assets/js/4.c46d92ce.js"><link rel="prefetch" href="/docs/assets/js/40.2dfce58d.js"><link rel="prefetch" href="/docs/assets/js/41.567bc6b7.js"><link rel="prefetch" href="/docs/assets/js/42.2221e8d4.js"><link rel="prefetch" href="/docs/assets/js/43.3a5fa5d7.js"><link rel="prefetch" href="/docs/assets/js/45.8f7fe9e5.js"><link rel="prefetch" href="/docs/assets/js/46.6117f0ab.js"><link rel="prefetch" href="/docs/assets/js/47.4ed69f2e.js"><link rel="prefetch" href="/docs/assets/js/48.4aa7ddad.js"><link rel="prefetch" href="/docs/assets/js/49.81f15faf.js"><link rel="prefetch" href="/docs/assets/js/5.38b3e286.js"><link rel="prefetch" href="/docs/assets/js/50.1b516ac1.js"><link rel="prefetch" href="/docs/assets/js/51.dd6e884f.js"><link rel="prefetch" href="/docs/assets/js/52.06ecf575.js"><link rel="prefetch" href="/docs/assets/js/53.18160f00.js"><link rel="prefetch" href="/docs/assets/js/54.53e6959c.js"><link rel="prefetch" href="/docs/assets/js/55.6d177f20.js"><link rel="prefetch" href="/docs/assets/js/56.16099169.js"><link rel="prefetch" href="/docs/assets/js/57.767a8adc.js"><link rel="prefetch" href="/docs/assets/js/58.61f61563.js"><link rel="prefetch" href="/docs/assets/js/59.80bd23aa.js"><link rel="prefetch" href="/docs/assets/js/6.a8391b77.js"><link rel="prefetch" href="/docs/assets/js/60.a6ba1e81.js"><link rel="prefetch" href="/docs/assets/js/61.8cbb2e0f.js"><link rel="prefetch" href="/docs/assets/js/62.27ad5fd9.js"><link rel="prefetch" href="/docs/assets/js/7.a7879395.js"><link rel="prefetch" href="/docs/assets/js/8.ce81400e.js"><link rel="prefetch" href="/docs/assets/js/9.428519ae.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.684dd12f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Geeno's Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link router-link-active">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link router-link-active">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>software</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/software/" class="sidebar-link">介绍</a></li><li><a href="/docs/software/flowchat.html" class="active sidebar-link">Flowcharts - Basic Syntax</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#graph" class="sidebar-link">Graph</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#flowchart-orientation" class="sidebar-link">Flowchart Orientation</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#flowcharts" class="sidebar-link">Flowcharts</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#nodes-shapes" class="sidebar-link">Nodes &amp; shapes</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-node-default" class="sidebar-link">A node (default)</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-node-with-text" class="sidebar-link">A node with text</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#node-shapes" class="sidebar-link">Node Shapes</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-node-with-round-edges" class="sidebar-link">A node with round edges</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-stadium-shaped-node" class="sidebar-link">A stadium-shaped node</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-node-in-a-subroutine-shape" class="sidebar-link">A node in a subroutine shape</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-node-in-a-cylindrical-shape" class="sidebar-link">A node in a cylindrical shape</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-node-in-the-form-of-a-circle" class="sidebar-link">A node in the form of a circle</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-node-in-an-asymetric-shape" class="sidebar-link">A node in an asymetric shape</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-node-rhombus" class="sidebar-link">A node (rhombus)</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-hexagon-node" class="sidebar-link">A hexagon node</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#parallelogram" class="sidebar-link">Parallelogram</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#parallelogram-alt" class="sidebar-link">Parallelogram alt</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#trapezoid" class="sidebar-link">Trapezoid</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#trapezoid-alt" class="sidebar-link">Trapezoid alt</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#links-between-nodes" class="sidebar-link">Links between nodes</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-link-with-arrow-head" class="sidebar-link">A link with arrow head</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#an-open-link" class="sidebar-link">An open link</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#text-on-links" class="sidebar-link">Text on links</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#a-link-with-arrow-head-and-text" class="sidebar-link">A link with arrow head and text</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#dotted-link" class="sidebar-link">Dotted link</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#dotted-link-with-text" class="sidebar-link">Dotted link with text</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#thick-link" class="sidebar-link">Thick link</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#thick-link-with-text" class="sidebar-link">Thick link with text</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#chaining-of-links" class="sidebar-link">Chaining of links</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#beta-new-arrow-types" class="sidebar-link">Beta: New arrow types</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#beta-multi-directional-arrows" class="sidebar-link">Beta: Multi directional arrows</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#minimum-length-of-a-link" class="sidebar-link">Minimum length of a link</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#special-characters-that-break-syntax" class="sidebar-link">Special characters that break syntax</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#entity-codes-to-escape-characters" class="sidebar-link">Entity codes to escape characters</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#subgraphs" class="sidebar-link">Subgraphs</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#beta-flowcharts" class="sidebar-link">Beta: flowcharts</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#interaction" class="sidebar-link">Interaction</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#comments" class="sidebar-link">Comments</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#styling-and-classes" class="sidebar-link">Styling and classes</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#styling-links" class="sidebar-link">Styling links</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#styling-a-node" class="sidebar-link">Styling a node</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#css-classes" class="sidebar-link">Css classes</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#default-class" class="sidebar-link">Default class</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#basic-support-for-fontawesome" class="sidebar-link">Basic support for fontawesome</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon" class="sidebar-link">Graph declarations with spaces between vertices and link and without semicolon</a></li><li class="sidebar-sub-header"><a href="/docs/software/flowchat.html#configuration" class="sidebar-link">Configuration...</a></li></ul></li><li><a href="/docs/software/markdown.html" class="sidebar-link">MarkDown 语法</a></li><li><a href="/docs/software/npm.html" class="sidebar-link">NPM使用</a></li><li><a href="/docs/software/typora.html" class="sidebar-link">Typora</a></li><li><a href="/docs/software/visualStudio.html" class="sidebar-link">visual studio</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="flowcharts-basic-syntax"><a href="#flowcharts-basic-syntax" class="header-anchor">#</a> Flowcharts - Basic Syntax</h1> <h2 id="graph"><a href="#graph" class="header-anchor">#</a> Graph</h2> <p>This statement declares the direction of the Flowchart.</p> <p>This declares the graph is oriented from top to bottom (<code>TD</code> or <code>TB</code>).</p> <div class="language- extra-class"><pre class="language-text"><code>graph TD
+    Start --&gt; Stop
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TD
+    Start --&gt; Stop
+</code></pre></div><p>This declares the graph is oriented from left to right (<code>LR</code>).</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    Start --&gt; Stop
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    Start --&gt; Stop
+</code></pre></div><h2 id="flowchart-orientation"><a href="#flowchart-orientation" class="header-anchor">#</a> Flowchart Orientation</h2> <p>Possible FlowChart orientations are:</p> <ul><li>TB - top to bottom</li> <li>TD - top-down/ same as top to bottom</li> <li>BT - bottom to top</li> <li>RL - right to left</li> <li>LR - left to right</li></ul> <h2 id="flowcharts"><a href="#flowcharts" class="header-anchor">#</a> Flowcharts</h2> <p>This renders a flowchart that allows for features such as: more arrow types, multi directional arrows, and linking to and from subgraphs.</p> <p>Apart from the graph type, the syntax is the same. This is currently experimental but when the beta period is over, both the graph and flowchart keywords will render in the new way. This means it is ok to start beta testing flowcharts.</p> <blockquote><p><strong>Important note</strong> Do not type the word &quot;end&quot; as a Flowchart node. Capitalize all or any one the letters to keep the flowchart from breaking, i.e, &quot;End&quot; or &quot;END&quot;. Or you can apply this <a href="https://github.com/mermaid-js/mermaid/issues/1444#issuecomment-639528897" target="_blank" rel="noopener noreferrer">workaround<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.**</p></blockquote> <h2 id="nodes-shapes"><a href="#nodes-shapes" class="header-anchor">#</a> Nodes &amp; shapes</h2> <h3 id="a-node-default"><a href="#a-node-default" class="header-anchor">#</a> A node (default)</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id
+</code></pre></div><blockquote><p><strong>Note</strong> The id is what is displayed in the box.</p></blockquote> <h3 id="a-node-with-text"><a href="#a-node-with-text" class="header-anchor">#</a> A node with text</h3> <p>It is also possible to set text in the box that differs from the id. If this is done several times, it is the last text
+found for the node that will be used. Also if you define edges for the node later on, you can omit text definitions. The
+one previously defined will be used when rendering the box.</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1[This is the text in the box]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1[This is the text in the box]
+</code></pre></div><h2 id="node-shapes"><a href="#node-shapes" class="header-anchor">#</a> Node Shapes</h2> <h3 id="a-node-with-round-edges"><a href="#a-node-with-round-edges" class="header-anchor">#</a> A node with round edges</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1(This is the text in the box)
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1(This is the text in the box)
+</code></pre></div><h3 id="a-stadium-shaped-node"><a href="#a-stadium-shaped-node" class="header-anchor">#</a> A stadium-shaped node</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1([This is the text in the box])
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1([This is the text in the box])
+</code></pre></div><h3 id="a-node-in-a-subroutine-shape"><a href="#a-node-in-a-subroutine-shape" class="header-anchor">#</a> A node in a subroutine shape</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1[[This is the text in the box]]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1[[This is the text in the box]]
+</code></pre></div><h3 id="a-node-in-a-cylindrical-shape"><a href="#a-node-in-a-cylindrical-shape" class="header-anchor">#</a> A node in a cylindrical shape</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1[(Database)]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1[(Database)]
+</code></pre></div><h3 id="a-node-in-the-form-of-a-circle"><a href="#a-node-in-the-form-of-a-circle" class="header-anchor">#</a> A node in the form of a circle</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1((This is the text in the circle))
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1((This is the text in the circle))
+</code></pre></div><h3 id="a-node-in-an-asymetric-shape"><a href="#a-node-in-an-asymetric-shape" class="header-anchor">#</a> A node in an asymetric shape</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1&gt;This is the text in the box]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1&gt;This is the text in the box]
+</code></pre></div><p>Currently only the shape above is possible and not its mirror. <em>This might change with future releases.</em></p> <h3 id="a-node-rhombus"><a href="#a-node-rhombus" class="header-anchor">#</a> A node (rhombus)</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1{This is the text in the box}
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1{This is the text in the box}
+</code></pre></div><h3 id="a-hexagon-node"><a href="#a-hexagon-node" class="header-anchor">#</a> A hexagon node</h3> <p>{% raw %}</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1{{This is the text in the box}}
+</code></pre></div><p>{% endraw %}</p> <div class="language-mermaid extra-class"><pre class="language-text"><code>{% raw %}
+graph LR
+    id1{{This is the text in the box}}
+{% endraw %}
+</code></pre></div><h3 id="parallelogram"><a href="#parallelogram" class="header-anchor">#</a> Parallelogram</h3> <div class="language- extra-class"><pre class="language-text"><code>graph TD
+    id1[/This is the text in the box/]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TD
+    id1[/This is the text in the box/]
+</code></pre></div><h3 id="parallelogram-alt"><a href="#parallelogram-alt" class="header-anchor">#</a> Parallelogram alt</h3> <div class="language- extra-class"><pre class="language-text"><code>graph TD
+    id1[\This is the text in the box\]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TD
+    id1[\This is the text in the box\]
+</code></pre></div><h3 id="trapezoid"><a href="#trapezoid" class="header-anchor">#</a> Trapezoid</h3> <div class="language- extra-class"><pre class="language-text"><code>graph TD
+    A[/Christmas\]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TD
+    A[/Christmas\]
+</code></pre></div><h3 id="trapezoid-alt"><a href="#trapezoid-alt" class="header-anchor">#</a> Trapezoid alt</h3> <div class="language- extra-class"><pre class="language-text"><code>graph TD
+    B[\Go shopping/]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TD
+    B[\Go shopping/]
+</code></pre></div><h2 id="links-between-nodes"><a href="#links-between-nodes" class="header-anchor">#</a> Links between nodes</h2> <p>Nodes can be connected with links/edges. It is possible to have different types of links or attach a text string to a link.</p> <h3 id="a-link-with-arrow-head"><a href="#a-link-with-arrow-head" class="header-anchor">#</a> A link with arrow head</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    A--&gt;B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A--&gt;B
+</code></pre></div><h3 id="an-open-link"><a href="#an-open-link" class="header-anchor">#</a> An open link</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    A --- B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A --- B
+</code></pre></div><h3 id="text-on-links"><a href="#text-on-links" class="header-anchor">#</a> Text on links</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    A-- This is the text! ---B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A-- This is the text ---B
+</code></pre></div><p>or</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    A---|This is the text|B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A---|This is the text|B
+</code></pre></div><h3 id="a-link-with-arrow-head-and-text"><a href="#a-link-with-arrow-head-and-text" class="header-anchor">#</a> A link with arrow head and text</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    A--&gt;|text|B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A--&gt;|text|B
+</code></pre></div><p>or</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    A-- text --&gt;B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A-- text --&gt;B
+</code></pre></div><h3 id="dotted-link"><a href="#dotted-link" class="header-anchor">#</a> Dotted link</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR;
+   A-.-&gt;B;
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR;
+   A-.-&gt;B;
+</code></pre></div><h3 id="dotted-link-with-text"><a href="#dotted-link-with-text" class="header-anchor">#</a> Dotted link with text</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+   A-. text .-&gt; B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+   A-. text .-&gt; B
+</code></pre></div><h3 id="thick-link"><a href="#thick-link" class="header-anchor">#</a> Thick link</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+   A ==&gt; B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+   A ==&gt; B
+</code></pre></div><h3 id="thick-link-with-text"><a href="#thick-link-with-text" class="header-anchor">#</a> Thick link with text</h3> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+   A == text ==&gt; B
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+   A == text ==&gt; B
+</code></pre></div><h3 id="chaining-of-links"><a href="#chaining-of-links" class="header-anchor">#</a> Chaining of links</h3> <p>It is possible declare many links in the same line as per below:</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+   A -- text --&gt; B -- text2 --&gt; C
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+   A -- text --&gt; B -- text2 --&gt; C
+</code></pre></div><p>It is also possible to declare multiple nodes links in the same line as per below:</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+   a --&gt; b &amp; c--&gt; d
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+   a --&gt; b &amp; c--&gt; d
+</code></pre></div><p>You can then describe dependencies in a very expressive way. Like the onliner below:</p> <div class="language- extra-class"><pre class="language-text"><code>graph TB
+    A &amp; B--&gt; C &amp; D
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TB
+    A &amp; B--&gt; C &amp; D
+</code></pre></div><p>If you describe the same diagram using the the basic syntax, it will take four lines. A
+word of warning, one could go overboard with this making the graph harder to read in
+markdown form. The Swedish word <code>lagom</code> comes to mind. It means, not to much and not to little.
+This goes for expressive syntaxes as well.</p> <div class="language- extra-class"><pre class="language-text"><code>graph TB
+    A --&gt; C
+    A --&gt; D
+    B --&gt; C
+    B --&gt; D
+</code></pre></div><h3 id="beta-new-arrow-types"><a href="#beta-new-arrow-types" class="header-anchor">#</a> Beta: New arrow types</h3> <p>When using flowchart instead of graph there is the are new types of arrows supported as per below:</p> <div class="language- extra-class"><pre class="language-text"><code>flowchart LR
+    A --o B
+    B --x C
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>flowchart LR
+    A --o B
+    B --x C
+</code></pre></div><h3 id="beta-multi-directional-arrows"><a href="#beta-multi-directional-arrows" class="header-anchor">#</a> Beta: Multi directional arrows</h3> <p>When using flowchart instead of graph there is the possibility to use multidirectional arrows.</p> <div class="language- extra-class"><pre class="language-text"><code>flowchart LR
+    A o--o B
+    B &lt;--&gt; C
+    C x--x D
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>flowchart LR
+    A o--o B
+    B &lt;--&gt; C
+    C x--x D
+</code></pre></div><h3 id="minimum-length-of-a-link"><a href="#minimum-length-of-a-link" class="header-anchor">#</a> Minimum length of a link</h3> <p>Each node in the flowchart is ultimately assigned to a rank in the rendered
+graph, i.e. to a vertical or horizontal level (depending on the flowchart
+orientation), based on the nodes to which it is linked. By default, links
+can span any number of ranks, but you can ask for any link to be longer
+than the others by adding extra dashes in the link definition.</p> <p>In the following example, two extra dashes are added in the link from node <em>B</em>
+to node <em>E</em>, so that it spans two more ranks than regular links:</p> <div class="language- extra-class"><pre class="language-text"><code>graph TD
+    A[Start] --&gt; B{Is it?};
+    B --&gt;|Yes| C[OK];
+    C --&gt; D[Rethink];
+    D --&gt; B;
+    B ----&gt;|No| E[End];
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TD
+    A[Start] --&gt; B{Is it?};
+    B --&gt;|Yes| C[OK];
+    C --&gt; D[Rethink];
+    D --&gt; B;
+    B ----&gt;|No| E[End];
+</code></pre></div><blockquote><p><strong>Note</strong> Links may still be made longer than the requested number of ranks
+by the rendering engine to accommodate other requests.</p></blockquote> <p>When the link label is written in the middle of the link, the extra dashes must
+be added on the right side of the link. The following example is equivalent to
+the previous one:</p> <div class="language- extra-class"><pre class="language-text"><code>graph TD
+    A[Start] --&gt; B{Is it?};
+    B -- Yes --&gt; C[OK];
+    C --&gt; D[Rethink];
+    D --&gt; B;
+    B -- No ----&gt; E[End];
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TD
+    A[Start] --&gt; B{Is it?};
+    B --&gt;|Yes| C[OK];
+    C --&gt; D[Rethink];
+    D --&gt; B;
+    B ----&gt;|No| E[End];
+</code></pre></div><p>For dotted or thick links, the characters to add are equals signs or dots,
+as summed up in the following table:</p> <table><thead><tr><th>Length</th> <th style="text-align:center;">1</th> <th style="text-align:center;">2</th> <th style="text-align:center;">3</th></tr></thead> <tbody><tr><td>Normal</td> <td style="text-align:center;"><code>---</code></td> <td style="text-align:center;"><code>----</code></td> <td style="text-align:center;"><code>-----</code></td></tr> <tr><td>Normal with arrow</td> <td style="text-align:center;"><code>--&gt;</code></td> <td style="text-align:center;"><code>---&gt;</code></td> <td style="text-align:center;"><code>----&gt;</code></td></tr> <tr><td>Thick</td> <td style="text-align:center;"><code>===</code></td> <td style="text-align:center;"><code>====</code></td> <td style="text-align:center;"><code>=====</code></td></tr> <tr><td>Thick with arrow</td> <td style="text-align:center;"><code>==&gt;</code></td> <td style="text-align:center;"><code>===&gt;</code></td> <td style="text-align:center;"><code>====&gt;</code></td></tr> <tr><td>Dotted</td> <td style="text-align:center;"><code>-.-</code></td> <td style="text-align:center;"><code>-..-</code></td> <td style="text-align:center;"><code>-...-</code></td></tr> <tr><td>Dotted with arrow</td> <td style="text-align:center;"><code>-.-&gt;</code></td> <td style="text-align:center;"><code>-..-&gt;</code></td> <td style="text-align:center;"><code>-...-&gt;</code></td></tr></tbody></table> <h2 id="special-characters-that-break-syntax"><a href="#special-characters-that-break-syntax" class="header-anchor">#</a> Special characters that break syntax</h2> <p>It is possible to put text within quotes in order to render more troublesome characters. As in the example below:</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1[&quot;This is the (text) in the box&quot;]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1[&quot;This is the (text) in the box&quot;]
+</code></pre></div><h3 id="entity-codes-to-escape-characters"><a href="#entity-codes-to-escape-characters" class="header-anchor">#</a> Entity codes to escape characters</h3> <p>It is possible to escape characters using the syntax examplified here.</p> <div class="language- extra-class"><pre class="language-text"><code>    graph LR
+        A[&quot;A double quote:#quot;&quot;] --&gt;B[&quot;A dec char:#9829;&quot;]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>    graph LR
+        A[&quot;A double quote:#quot;&quot;] --&gt;B[&quot;A dec char:#9829;&quot;]
+</code></pre></div><h2 id="subgraphs"><a href="#subgraphs" class="header-anchor">#</a> Subgraphs</h2> <div class="language- extra-class"><pre class="language-text"><code>subgraph title
+    graph definition
+end
+</code></pre></div><p>An example below:</p> <div class="language- extra-class"><pre class="language-text"><code>graph TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</code></pre></div><p>You can also set an excplicit id for the subgraph.</p> <div class="language- extra-class"><pre class="language-text"><code>graph TB
+    c1--&gt;a2
+    subgraph ide1 [one]
+    a1--&gt;a2
+    end
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TB
+    c1--&gt;a2
+    subgraph id1 [one]
+    a1--&gt;a2
+    end
+</code></pre></div><h2 id="beta-flowcharts"><a href="#beta-flowcharts" class="header-anchor">#</a> Beta: flowcharts</h2> <p>With the graphtype flowcharts it is also possible to set edges to and from subgraphs as in the graph below.</p> <div class="language- extra-class"><pre class="language-text"><code>flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+</code></pre></div><h2 id="interaction"><a href="#interaction" class="header-anchor">#</a> Interaction</h2> <p>It is possible to bind a click event to a node, the click can lead to either a javascript callback or to a link which will be opened in a new browser tab. <strong>Note</strong>: This functionality is disabled when using <code>securityLevel='strict'</code> and enabled when using <code>securityLevel='loose'</code>.</p> <div class="language- extra-class"><pre class="language-text"><code>click nodeId callback
+</code></pre></div><ul><li>nodeId is the id of the node</li> <li>callback is the name of a javascript function defined on the page displaying the graph, the function will be called with the nodeId as parameter.</li></ul> <p>Examples of tooltip usage below:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script&gt;
+  var callback = function(){
+      alert('A callback was triggered');
+  }
+&lt;/script&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>graph LR;
+    A--&gt;B;
+    click A callback &quot;Tooltip for a callback&quot;
+    click B &quot;http://www.github.com&quot; &quot;This is a tooltip for a link&quot;
+</code></pre></div><p>The tooltip text is surrounded in double quotes. The styles of the tooltip are set by the class .mermaidTooltip.</p> <div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A--&gt;B;
+    click A callback &quot;Tooltip&quot;
+    click B &quot;http://www.github.com&quot; &quot;This is a link&quot;
+</code></pre></div><blockquote><p><strong>Success</strong> The tooltip functionality and the ability to link to urls are available from version 0.5.2.</p></blockquote> <p>?&gt; Due to limitations with how Docsify handles JavaScript callback functions, an alternate working demo for the above code can be viewed at <a href="https://jsfiddle.net/s37cjoau/3/" target="_blank" rel="noopener noreferrer">this jsfiddle<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <p>Links are opened in the same browser tab/window by default. It is possible to change this by adding a link target to the click definition (<code>_self</code>, <code>_blank</code>, <code>_parent</code> and <code>_top</code> are supported):</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR;
+    A--&gt;B;
+    B--&gt;C;
+    click A &quot;http://www.github.com&quot; _blank
+    click B &quot;http://www.github.com&quot; &quot;Open this in a new tab&quot; _blank
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR;
+    A--&gt;B;
+    B--&gt;C;
+    click A &quot;http://www.github.com&quot; _blank
+    click B &quot;http://www.github.com&quot; &quot;Open this in a new tab&quot; _blank
+</code></pre></div><p>Beginners tip, a full example using interactive links in a html context:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;body&gt;
+  &lt;div class=&quot;mermaid&quot;&gt;
+    graph LR;
+        A--&gt;B;
+        click A callback &quot;Tooltip&quot;
+        click B &quot;http://www.github.com&quot; &quot;This is a link&quot;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    var callback = function(){
+        alert('A callback was triggered');
+    }
+    var config = {
+        startOnLoad:true,
+        flowchart:{
+            useMaxWidth:true,
+            htmlLabels:true,
+            curve:'cardinal',
+        },
+        securityLevel:'loose',
+    };
+
+    mermaid.initialize(config);
+  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre></div><h3 id="comments"><a href="#comments" class="header-anchor">#</a> Comments</h3> <p>Comments can be entered within a flow diagram, which will be ignored by the parser. Comments need to be on their own line, and must be prefaced with <code>%%</code> (double percent signs). Any text after the start of the comment to the next newline will be treated as a comment, including any flow syntax</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+%% this is a comment A -- text --&gt; B{node}
+   A -- text --&gt; B -- text2 --&gt; C
+</code></pre></div><h2 id="styling-and-classes"><a href="#styling-and-classes" class="header-anchor">#</a> Styling and classes</h2> <h3 id="styling-links"><a href="#styling-links" class="header-anchor">#</a> Styling links</h3> <p>It is possible to style links. For instance you might want to style a link that is going backwards in the flow. As links
+have no ids in the same way as nodes, some other way of deciding what style the links should be attached to is required.
+Instead of ids, the order number of when the link was defined in the graph is used. In the example below the style
+defined in the linkStyle statement will belong to the fourth link in the graph:</p> <div class="language- extra-class"><pre class="language-text"><code>linkStyle 3 stroke:#ff3,stroke-width:4px,color:red;
+</code></pre></div><h3 id="styling-a-node"><a href="#styling-a-node" class="header-anchor">#</a> Styling a node</h3> <p>It is possible to apply specific styles such as a thicker border or a different background color to a node.</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    id1(Start)--&gt;id2(Stop)
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px
+    style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    id1(Start)--&gt;id2(Stop)
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px
+    style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+</code></pre></div><h4 id="classes"><a href="#classes" class="header-anchor">#</a> Classes</h4> <p>More convenient then defining the style every time is to define a class of styles and attach this class to the nodes that
+should have a different look.</p> <p>a class definition looks like the example below:</p> <div class="language- extra-class"><pre class="language-text"><code>    classDef className fill:#f9f,stroke:#333,stroke-width:4px;
+</code></pre></div><p>Attachment of a class to a node is done as per below:</p> <div class="language- extra-class"><pre class="language-text"><code>    class nodeId1 className;
+</code></pre></div><p>It is also possible to attach a class to a list of nodes in one statement:</p> <div class="language- extra-class"><pre class="language-text"><code>    class nodeId1,nodeId2 className;
+</code></pre></div><p>A shorter form of adding a class is to attach the classname to the node using the <code>:::</code>operator as per below:</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    A:::someclass --&gt; B
+    classDef someclass fill:#f96;
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A:::someclass --&gt; B
+    classDef someclass fill:#f96;
+</code></pre></div><h3 id="css-classes"><a href="#css-classes" class="header-anchor">#</a> Css classes</h3> <p>It is also possible to predefine classes in css styles that can be applied from the graph definition as in the example
+below:</p> <p><strong>Example style</strong></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.cssClass &gt; rect</span> <span class="token punctuation">{</span>
+    <span class="token property">fill</span><span class="token punctuation">:</span> #ff0000<span class="token punctuation">;</span>
+    <span class="token property">stroke</span><span class="token punctuation">:</span> #ffff00<span class="token punctuation">;</span>
+    <span class="token property">stroke-width</span><span class="token punctuation">:</span> 4px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><strong>Example definition</strong></p> <div class="language- extra-class"><pre class="language-text"><code>graph LR;
+    A--&gt;B[AAA&lt;span&gt;BBB&lt;/span&gt;];
+    B--&gt;D;
+    class A cssClass;
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR;
+    A--&gt;B[AAA&lt;span&gt;BBB&lt;/span&gt;];
+    B--&gt;D;
+    class A cssClass;
+</code></pre></div><h3 id="default-class"><a href="#default-class" class="header-anchor">#</a> Default class</h3> <p>If a class is named default it will be assigned to all classes without specific class definitions.</p> <div class="language- extra-class"><pre class="language-text"><code>    classDef default fill:#f9f,stroke:#333,stroke-width:4px;
+</code></pre></div><h2 id="basic-support-for-fontawesome"><a href="#basic-support-for-fontawesome" class="header-anchor">#</a> Basic support for fontawesome</h2> <p>It is possible to add icons from fontawesome.</p> <p>The icons are acessed via the syntax fa:#icon class name#.</p> <div class="language- extra-class"><pre class="language-text"><code>graph TD
+    B[&quot;fa:fa-twitter for peace&quot;]
+    B--&gt;C[fa:fa-ban forbidden]
+    B--&gt;D(fa:fa-spinner);
+    B--&gt;E(A fa:fa-camera-retro perhaps?);
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph TD
+    B[&quot;fa:fa-twitter for peace&quot;]
+    B--&gt;C[fa:fa-ban forbidden]
+    B--&gt;D(fa:fa-spinner);
+    B--&gt;E(A fa:fa-camera-retro perhaps?);
+</code></pre></div><h2 id="graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon"><a href="#graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon" class="header-anchor">#</a> Graph declarations with spaces between vertices and link and without semicolon</h2> <ul><li><p>In graph declarations, the statements also can now end without a semicolon. After release 0.2.16, ending a graph statement with semicolon is just optional. So the below graph declaration is also valid along with the old declarations of the graph.</p></li> <li><p>A single space is allowed between vertices and the link. However there should not be any space between a vertex and its text and a link and its text. The old syntax of graph declaration will also work and hence this new feature is optional and is introduce to improve readability.</p></li></ul> <p>Below is the new declaration of the graph edges which is also valid along with the old declaration of the graph edges.</p> <div class="language- extra-class"><pre class="language-text"><code>graph LR
+    A[Hard edge] --&gt;|Link text| B(Round edge)
+    B --&gt; C{Decision}
+    C --&gt;|One| D[Result one]
+    C --&gt;|Two| E[Result two]
+</code></pre></div><div class="language-mermaid extra-class"><pre class="language-text"><code>graph LR
+    A[Hard edge] --&gt;|Link text| B(Round edge)
+    B --&gt; C{Decision}
+    C --&gt;|One| D[Result one]
+    C --&gt;|Two| E[Result two]
+</code></pre></div><h2 id="configuration"><a href="#configuration" class="header-anchor">#</a> Configuration...</h2> <p>Is it possible to adjust the width of the rendered flowchart.</p> <p>This is done by defining <strong>mermaid.flowchartConfig</strong> or by the CLI to use a json file with the configuration. How to use
+the CLI is described in the mermaidCLI page.
+mermaid.flowchartConfig can be set to a JSON string with config parameters or the corresponding object.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>mermaid<span class="token punctuation">.</span>flowchartConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+    width<span class="token operator">:</span> <span class="token number">100</span><span class="token operator">%</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">Friday, October 9, 2020 10:26 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/software/" class="prev router-link-active">
+        介绍
+      </a></span> <span class="next"><a href="/docs/software/markdown.html">
+        MarkDown 语法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/docs/assets/js/app.e2bd7cff.js" defer></script><script src="/docs/assets/js/2.e252a344.js" defer></script><script src="/docs/assets/js/44.25c83621.js" defer></script><script src="/docs/assets/js/3.cd7f7020.js" defer></script>
+  </body>
+</html>

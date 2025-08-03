@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>读取示例 | Geeno&#39;s Docs</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/docs/img/apple-touch-icon-152x152.png">
+    <link rel="manifest" href="/docs/manifest.json">
+    <link rel="apple-touch-icon" href="/docs/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/docs/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/docs/assets/css/0.styles.684dd12f.css" as="style"><link rel="preload" href="/docs/assets/js/app.e2bd7cff.js" as="script"><link rel="preload" href="/docs/assets/js/2.e252a344.js" as="script"><link rel="preload" href="/docs/assets/js/26.d33c7f1e.js" as="script"><link rel="preload" href="/docs/assets/js/3.cd7f7020.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.ab46e7c8.js"><link rel="prefetch" href="/docs/assets/js/11.bdd1bcbb.js"><link rel="prefetch" href="/docs/assets/js/12.7b4de923.js"><link rel="prefetch" href="/docs/assets/js/13.37bccccc.js"><link rel="prefetch" href="/docs/assets/js/14.ccde06f7.js"><link rel="prefetch" href="/docs/assets/js/15.b23050ba.js"><link rel="prefetch" href="/docs/assets/js/16.4d12f0d2.js"><link rel="prefetch" href="/docs/assets/js/17.861e12b5.js"><link rel="prefetch" href="/docs/assets/js/18.f0faa1d7.js"><link rel="prefetch" href="/docs/assets/js/19.0834b430.js"><link rel="prefetch" href="/docs/assets/js/20.72656569.js"><link rel="prefetch" href="/docs/assets/js/21.8ca58c04.js"><link rel="prefetch" href="/docs/assets/js/22.234b0a3f.js"><link rel="prefetch" href="/docs/assets/js/23.66c53c46.js"><link rel="prefetch" href="/docs/assets/js/24.5d15bf02.js"><link rel="prefetch" href="/docs/assets/js/25.d5fdf813.js"><link rel="prefetch" href="/docs/assets/js/27.1a1589e4.js"><link rel="prefetch" href="/docs/assets/js/28.786bd896.js"><link rel="prefetch" href="/docs/assets/js/29.bd546282.js"><link rel="prefetch" href="/docs/assets/js/30.c5eb2db5.js"><link rel="prefetch" href="/docs/assets/js/31.7205f0f5.js"><link rel="prefetch" href="/docs/assets/js/32.4466c93b.js"><link rel="prefetch" href="/docs/assets/js/33.b47c7c80.js"><link rel="prefetch" href="/docs/assets/js/34.7bbdcb5f.js"><link rel="prefetch" href="/docs/assets/js/35.0028dd26.js"><link rel="prefetch" href="/docs/assets/js/36.7d36e51d.js"><link rel="prefetch" href="/docs/assets/js/37.3f983ca7.js"><link rel="prefetch" href="/docs/assets/js/38.04299ecf.js"><link rel="prefetch" href="/docs/assets/js/39.46bf1693.js"><link rel="prefetch" href="/docs/assets/js/4.c46d92ce.js"><link rel="prefetch" href="/docs/assets/js/40.2dfce58d.js"><link rel="prefetch" href="/docs/assets/js/41.567bc6b7.js"><link rel="prefetch" href="/docs/assets/js/42.2221e8d4.js"><link rel="prefetch" href="/docs/assets/js/43.3a5fa5d7.js"><link rel="prefetch" href="/docs/assets/js/44.25c83621.js"><link rel="prefetch" href="/docs/assets/js/45.8f7fe9e5.js"><link rel="prefetch" href="/docs/assets/js/46.6117f0ab.js"><link rel="prefetch" href="/docs/assets/js/47.4ed69f2e.js"><link rel="prefetch" href="/docs/assets/js/48.4aa7ddad.js"><link rel="prefetch" href="/docs/assets/js/49.81f15faf.js"><link rel="prefetch" href="/docs/assets/js/5.38b3e286.js"><link rel="prefetch" href="/docs/assets/js/50.1b516ac1.js"><link rel="prefetch" href="/docs/assets/js/51.dd6e884f.js"><link rel="prefetch" href="/docs/assets/js/52.06ecf575.js"><link rel="prefetch" href="/docs/assets/js/53.18160f00.js"><link rel="prefetch" href="/docs/assets/js/54.53e6959c.js"><link rel="prefetch" href="/docs/assets/js/55.6d177f20.js"><link rel="prefetch" href="/docs/assets/js/56.16099169.js"><link rel="prefetch" href="/docs/assets/js/57.767a8adc.js"><link rel="prefetch" href="/docs/assets/js/58.61f61563.js"><link rel="prefetch" href="/docs/assets/js/59.80bd23aa.js"><link rel="prefetch" href="/docs/assets/js/6.a8391b77.js"><link rel="prefetch" href="/docs/assets/js/60.a6ba1e81.js"><link rel="prefetch" href="/docs/assets/js/61.8cbb2e0f.js"><link rel="prefetch" href="/docs/assets/js/62.27ad5fd9.js"><link rel="prefetch" href="/docs/assets/js/7.a7879395.js"><link rel="prefetch" href="/docs/assets/js/8.ce81400e.js"><link rel="prefetch" href="/docs/assets/js/9.428519ae.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.684dd12f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Geeno's Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link router-link-active">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link router-link-active">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>npoi</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/bakend/nuget/fullspec/npoi/" class="sidebar-link">NPOI 的使用</a></li><li><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html" class="sidebar-link">NPOI 整理</a></li><li><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper-demo.html" class="active sidebar-link">读取示例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper-demo.html#通过流生成-excel" class="sidebar-link">通过流生成 excel</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="读取示例"><a href="#读取示例" class="header-anchor">#</a> 读取示例</h1> <h2 id="通过流生成-excel"><a href="#通过流生成-excel" class="header-anchor">#</a> 通过流生成 excel</h2> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc</span><span class="token punctuation">;</span>
+
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>HSSF<span class="token punctuation">.</span>Record<span class="token punctuation">.</span>Aggregates</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>HSSF<span class="token punctuation">.</span>UserModel</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>XWPF<span class="token punctuation">.</span>UserModel</span><span class="token punctuation">;</span>
+
+<span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>IO</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Linq</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Threading<span class="token punctuation">.</span>Tasks</span><span class="token punctuation">;</span>
+
+<span class="token keyword">namespace</span> <span class="token namespace">NpoiDemo<span class="token punctuation">.</span>Common</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">using</span> <span class="token class-name">S</span> <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ZJDelivery</span><span class="token punctuation">:</span><span class="token type-list"><span class="token class-name">CustomReportBase</span></span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">FileContentResult</span> <span class="token function">GetCDFPickDetail</span><span class="token punctuation">(</span><span class="token class-name">List<span class="token punctuation">&lt;</span>CDFPickDetail<span class="token punctuation">&gt;</span></span> handover<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> hssfworkbook <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">HSSFWorkbook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token class-name"><span class="token keyword">var</span></span> sheet1 <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateSheet</span><span class="token punctuation">(</span><span class="token string">&quot;Sheet1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> font <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>FontName <span class="token operator">=</span> <span class="token string">&quot;Times New Roman&quot;</span><span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>FontHeightInPoints <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> style <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateCellStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            style<span class="token punctuation">.</span><span class="token function">SetFont</span><span class="token punctuation">(</span>font<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token class-name"><span class="token keyword">var</span></span> font2 <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            font2<span class="token punctuation">.</span>FontName <span class="token operator">=</span> <span class="token string">&quot;Times New Roman&quot;</span><span class="token punctuation">;</span>
+            font2<span class="token punctuation">.</span>FontHeightInPoints <span class="token operator">=</span> <span class="token number">36</span><span class="token punctuation">;</span>
+
+            <span class="token preprocessor property">#<span class="token directive keyword">region</span>   {第一行}</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> s1Row1Style <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateCellStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token class-name"><span class="token keyword">var</span></span> r1 <span class="token operator">=</span> sheet1<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            r1<span class="token punctuation">.</span>HeightInPoints <span class="token operator">=</span> <span class="token number">46.5f</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> r1c1Style <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateCellStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            r1c1Style<span class="token punctuation">.</span>Alignment <span class="token operator">=</span> NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>UserModel<span class="token punctuation">.</span>HorizontalAlignment<span class="token punctuation">.</span>Center<span class="token punctuation">;</span>
+            r1c1Style<span class="token punctuation">.</span>VerticalAlignment <span class="token operator">=</span> NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>UserModel<span class="token punctuation">.</span>VerticalAlignment<span class="token punctuation">.</span>Center<span class="token punctuation">;</span>
+            r1c1Style<span class="token punctuation">.</span><span class="token function">SetFont</span><span class="token punctuation">(</span>font2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token class-name"><span class="token keyword">var</span></span> r1c1 <span class="token operator">=</span> r1<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            r1c1<span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;VIP 理 货 单&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            r1c1<span class="token punctuation">.</span>CellStyle <span class="token operator">=</span> r1c1Style<span class="token punctuation">;</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                r1<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            sheet1<span class="token punctuation">.</span><span class="token function">AddMergedRegion</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>Util<span class="token punctuation">.</span>CellRangeAddress</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token preprocessor property">#<span class="token directive keyword">endregion</span></span>
+
+            <span class="token preprocessor property">#<span class="token directive keyword">region</span>{第二行}</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> r2 <span class="token operator">=</span> sheet1<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> r2c1 <span class="token operator">=</span> r2<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            r2c1<span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$&quot;Date：</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token string">&quot;dd-MM-yyyy&quot;</span><span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            r2c1<span class="token punctuation">.</span>CellStyle <span class="token operator">=</span> style<span class="token punctuation">;</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                r2<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token preprocessor property">#<span class="token directive keyword">endregion</span></span>
+            <span class="token preprocessor property">#<span class="token directive keyword">region</span>   {第三行-空白行}</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> r3 <span class="token operator">=</span> sheet1<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                r3<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token preprocessor property">#<span class="token directive keyword">endregion</span></span>
+
+            <span class="token class-name"><span class="token keyword">var</span></span> fontCotent <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>FontName <span class="token operator">=</span> <span class="token string">&quot;Times New Roman&quot;</span><span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>FontHeightInPoints <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> contentStyle <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateCellStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            contentStyle<span class="token punctuation">.</span>Alignment <span class="token operator">=</span> NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>UserModel<span class="token punctuation">.</span>HorizontalAlignment<span class="token punctuation">.</span>Center<span class="token punctuation">;</span>
+            contentStyle<span class="token punctuation">.</span>VerticalAlignment <span class="token operator">=</span> NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>UserModel<span class="token punctuation">.</span>VerticalAlignment<span class="token punctuation">.</span>Center<span class="token punctuation">;</span>
+            contentStyle<span class="token punctuation">.</span><span class="token function">SetFont</span><span class="token punctuation">(</span>font<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">setBorderStyle</span><span class="token punctuation">(</span>contentStyle<span class="token punctuation">,</span>NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>UserModel<span class="token punctuation">.</span>BorderStyle<span class="token punctuation">.</span>Medium<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token preprocessor property">#<span class="token directive keyword">region</span>   {第四行，列名}</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> r4 <span class="token operator">=</span> sheet1<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> r4Col <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span>S<span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">{</span>
+                <span class="token string">&quot;VIP&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;ItemID&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;UPC&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;C Code&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Product&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;QTY&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Inventory&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Location&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> r4Col<span class="token punctuation">.</span>Count<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                r4<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span>r4Col<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r4<span class="token punctuation">.</span>Cells<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">.</span>CellStyle <span class="token operator">=</span> contentStyle<span class="token punctuation">;</span>
+
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> r4c9 <span class="token operator">=</span> r4<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span>r4Col<span class="token punctuation">.</span>Count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> r4c9Style <span class="token operator">=</span> hssfworkbook<span class="token punctuation">.</span><span class="token function">CreateCellStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            r4c9<span class="token punctuation">.</span>CellStyle <span class="token operator">=</span> contentStyle<span class="token punctuation">;</span>
+            r4c9<span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;Cantons Detail&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                r4<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r4<span class="token punctuation">.</span>Cells<span class="token punctuation">[</span>x <span class="token operator">+</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">.</span>CellStyle <span class="token operator">=</span> contentStyle<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sheet1<span class="token punctuation">.</span><span class="token function">AddMergedRegion</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>Util<span class="token punctuation">.</span>CellRangeAddress</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token class-name"><span class="token keyword">var</span></span> r4Col2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">List<span class="token punctuation">&lt;</span>S<span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">{</span>
+                <span class="token string">&quot;Lot&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Cantons&quot;</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;Remark&quot;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                r4<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span>r4Col2<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r4<span class="token punctuation">.</span>Cells<span class="token punctuation">[</span>x <span class="token operator">+</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">.</span>CellStyle <span class="token operator">=</span> contentStyle<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token preprocessor property">#<span class="token directive keyword">endregion</span></span>
+
+
+            <span class="token comment">//数据填充</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> rIndex <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> calcIndex <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+            handover<span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                <span class="token class-name"><span class="token keyword">var</span></span> r <span class="token operator">=</span> sheet1<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span>rIndex<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//vip 后面需要进行合并</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>ItemID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>UPC<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>CCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>Product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>QTY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//Inventory</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//location</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//input qty</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;pcs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//input qty</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;ctn&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//input qty</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;pcs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//input qty</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;ctn&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//lot</span>
+                <span class="token class-name"><span class="token keyword">var</span></span> m <span class="token operator">=</span> r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                m<span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//Cantons</span>
+                m<span class="token punctuation">.</span><span class="token function">SetCellFormula</span><span class="token punctuation">(</span><span class="token interpolation-string"><span class="token string">$&quot;SUM(K</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">calcIndex</span><span class="token punctuation">}</span></span><span class="token string">,O</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">calcIndex</span><span class="token punctuation">}</span></span><span class="token string">)&quot;</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//Remark</span>
+                Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>y <span class="token operator">=&gt;</span>
+                <span class="token punctuation">{</span>
+                    r<span class="token punctuation">.</span>Cells<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">.</span>CellStyle <span class="token operator">=</span> contentStyle<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                calcIndex<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x<span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token class-name"><span class="token keyword">var</span></span> r <span class="token operator">=</span> sheet1<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span>rIndex<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>y<span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+                    r<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//vip列合并</span>
+            sheet1<span class="token punctuation">.</span><span class="token function">GetRow</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Cells<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span>handover<span class="token punctuation">.</span><span class="token function">First</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>VIP<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            sheet1<span class="token punctuation">.</span><span class="token function">AddMergedRegion</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>Util<span class="token punctuation">.</span>CellRangeAddress</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> handover<span class="token punctuation">.</span>Count<span class="token operator">+</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">//理货人</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> rlast <span class="token operator">=</span> sheet1<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span>rIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> rlastc1 <span class="token operator">=</span> rlast<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            rlastc1<span class="token punctuation">.</span><span class="token function">SetCellValue</span><span class="token punctuation">(</span><span class="token string">&quot;理货人员签名：&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            rlastc1<span class="token punctuation">.</span>CellStyle <span class="token operator">=</span> style<span class="token punctuation">;</span>
+            <span class="token comment">//自适应列宽</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                sheet1<span class="token punctuation">.</span><span class="token function">AutoSizeColumn</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//固定宽度设置</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                sheet1<span class="token punctuation">.</span><span class="token function">SetColumnWidth</span><span class="token punctuation">(</span>x<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> bytes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> ms <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">MemoryStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                hssfworkbook<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>ms<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                ms<span class="token punctuation">.</span><span class="token function">Flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                ms<span class="token punctuation">.</span>Position <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                bytes <span class="token operator">=</span> ms<span class="token punctuation">.</span><span class="token function">GetBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">FileContentResult</span><span class="token punctuation">(</span>bytes<span class="token punctuation">,</span> <span class="token string">&quot;application/vnd.ms-excel&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                FileDownloadName <span class="token operator">=</span> <span class="token interpolation-string"><span class="token string">$&quot;VIP拣货明细表</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token expression language-csharp">DateTime<span class="token punctuation">.</span>Now<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token string">&quot;yyyyMMddHHmmss&quot;</span><span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">.xls&quot;</span></span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CDFPickDetail</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> VIP <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> ItemID <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> UPC <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> CCode <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> Product <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> QTY <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> Inventory <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> Location <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> CantonsDetail <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> Lot <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> Cantons <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">S</span> Remark <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">Saturday, July 25, 2020 1:16 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html" class="prev">
+        NPOI 整理
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/docs/assets/js/app.e2bd7cff.js" defer></script><script src="/docs/assets/js/2.e252a344.js" defer></script><script src="/docs/assets/js/26.d33c7f1e.js" defer></script><script src="/docs/assets/js/3.cd7f7020.js" defer></script>
+  </body>
+</html>

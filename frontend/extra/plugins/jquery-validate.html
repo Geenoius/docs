@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jquery-Validation | Geeno&#39;s Docs</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/docs/img/apple-touch-icon-152x152.png">
+    <link rel="manifest" href="/docs/manifest.json">
+    <link rel="apple-touch-icon" href="/docs/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/docs/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/docs/assets/css/0.styles.684dd12f.css" as="style"><link rel="preload" href="/docs/assets/js/app.e2bd7cff.js" as="script"><link rel="preload" href="/docs/assets/js/2.e252a344.js" as="script"><link rel="preload" href="/docs/assets/js/41.567bc6b7.js" as="script"><link rel="preload" href="/docs/assets/js/3.cd7f7020.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.ab46e7c8.js"><link rel="prefetch" href="/docs/assets/js/11.bdd1bcbb.js"><link rel="prefetch" href="/docs/assets/js/12.7b4de923.js"><link rel="prefetch" href="/docs/assets/js/13.37bccccc.js"><link rel="prefetch" href="/docs/assets/js/14.ccde06f7.js"><link rel="prefetch" href="/docs/assets/js/15.b23050ba.js"><link rel="prefetch" href="/docs/assets/js/16.4d12f0d2.js"><link rel="prefetch" href="/docs/assets/js/17.861e12b5.js"><link rel="prefetch" href="/docs/assets/js/18.f0faa1d7.js"><link rel="prefetch" href="/docs/assets/js/19.0834b430.js"><link rel="prefetch" href="/docs/assets/js/20.72656569.js"><link rel="prefetch" href="/docs/assets/js/21.8ca58c04.js"><link rel="prefetch" href="/docs/assets/js/22.234b0a3f.js"><link rel="prefetch" href="/docs/assets/js/23.66c53c46.js"><link rel="prefetch" href="/docs/assets/js/24.5d15bf02.js"><link rel="prefetch" href="/docs/assets/js/25.d5fdf813.js"><link rel="prefetch" href="/docs/assets/js/26.d33c7f1e.js"><link rel="prefetch" href="/docs/assets/js/27.1a1589e4.js"><link rel="prefetch" href="/docs/assets/js/28.786bd896.js"><link rel="prefetch" href="/docs/assets/js/29.bd546282.js"><link rel="prefetch" href="/docs/assets/js/30.c5eb2db5.js"><link rel="prefetch" href="/docs/assets/js/31.7205f0f5.js"><link rel="prefetch" href="/docs/assets/js/32.4466c93b.js"><link rel="prefetch" href="/docs/assets/js/33.b47c7c80.js"><link rel="prefetch" href="/docs/assets/js/34.7bbdcb5f.js"><link rel="prefetch" href="/docs/assets/js/35.0028dd26.js"><link rel="prefetch" href="/docs/assets/js/36.7d36e51d.js"><link rel="prefetch" href="/docs/assets/js/37.3f983ca7.js"><link rel="prefetch" href="/docs/assets/js/38.04299ecf.js"><link rel="prefetch" href="/docs/assets/js/39.46bf1693.js"><link rel="prefetch" href="/docs/assets/js/4.c46d92ce.js"><link rel="prefetch" href="/docs/assets/js/40.2dfce58d.js"><link rel="prefetch" href="/docs/assets/js/42.2221e8d4.js"><link rel="prefetch" href="/docs/assets/js/43.3a5fa5d7.js"><link rel="prefetch" href="/docs/assets/js/44.25c83621.js"><link rel="prefetch" href="/docs/assets/js/45.8f7fe9e5.js"><link rel="prefetch" href="/docs/assets/js/46.6117f0ab.js"><link rel="prefetch" href="/docs/assets/js/47.4ed69f2e.js"><link rel="prefetch" href="/docs/assets/js/48.4aa7ddad.js"><link rel="prefetch" href="/docs/assets/js/49.81f15faf.js"><link rel="prefetch" href="/docs/assets/js/5.38b3e286.js"><link rel="prefetch" href="/docs/assets/js/50.1b516ac1.js"><link rel="prefetch" href="/docs/assets/js/51.dd6e884f.js"><link rel="prefetch" href="/docs/assets/js/52.06ecf575.js"><link rel="prefetch" href="/docs/assets/js/53.18160f00.js"><link rel="prefetch" href="/docs/assets/js/54.53e6959c.js"><link rel="prefetch" href="/docs/assets/js/55.6d177f20.js"><link rel="prefetch" href="/docs/assets/js/56.16099169.js"><link rel="prefetch" href="/docs/assets/js/57.767a8adc.js"><link rel="prefetch" href="/docs/assets/js/58.61f61563.js"><link rel="prefetch" href="/docs/assets/js/59.80bd23aa.js"><link rel="prefetch" href="/docs/assets/js/6.a8391b77.js"><link rel="prefetch" href="/docs/assets/js/60.a6ba1e81.js"><link rel="prefetch" href="/docs/assets/js/61.8cbb2e0f.js"><link rel="prefetch" href="/docs/assets/js/62.27ad5fd9.js"><link rel="prefetch" href="/docs/assets/js/7.a7879395.js"><link rel="prefetch" href="/docs/assets/js/8.ce81400e.js"><link rel="prefetch" href="/docs/assets/js/9.428519ae.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.684dd12f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Geeno's Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link router-link-active">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link router-link-active">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>plugins</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/frontend/extra/plugins/" class="sidebar-link">介绍</a></li><li><a href="/docs/frontend/extra/plugins/jquery.html" class="sidebar-link">Jquery</a></li><li><a href="/docs/frontend/extra/plugins/jquery-uniform.html" class="sidebar-link">Jquery-uniform</a></li><li><a href="/docs/frontend/extra/plugins/jquery-validate.html" class="active sidebar-link">Jquery-Validation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_1-online-doc" class="sidebar-link">1. online doc</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_2-依赖" class="sidebar-link">2. 依赖</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_3-配置" class="sidebar-link">3. 配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_3-1-错误信息操作" class="sidebar-link">3.1. 错误信息操作</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_3-2-支持-data-属性配置显示" class="sidebar-link">3.2. 支持 data 属性配置显示</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_3-3-窗体提交处理" class="sidebar-link">3.3. 窗体提交处理</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_3-4-自定义验证属性" class="sidebar-link">3.4. 自定义验证属性</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_3-5-重置窗体状态" class="sidebar-link">3.5. 重置窗体状态</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#_3-6-内置的校验规则" class="sidebar-link">3.6. 内置的校验规则</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/frontend/extra/plugins/jquery-validate.html#最终示例" class="sidebar-link">最终示例</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jquery-validation"><a href="#jquery-validation" class="header-anchor">#</a> Jquery-Validation</h1> <h2 id="_1-online-doc"><a href="#_1-online-doc" class="header-anchor">#</a> 1. online doc</h2> <blockquote><p>在线 Git:
+<a href="https://github.com/jquery-validation/jquery-validation" target="_blank" rel="noopener noreferrer">onlineGit<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h2 id="_2-依赖"><a href="#_2-依赖" class="header-anchor">#</a> 2. 依赖</h2> <blockquote><p>依赖：
+Required
+jQuery, tested with 1.7.2, 1.8.3, 1.9.1, 1.11.1, 3.1.1
+必须在 form 里使用 submit 按钮，并且属性必须有 Name</p></blockquote> <h2 id="_3-配置"><a href="#_3-配置" class="header-anchor">#</a> 3. 配置</h2> <h3 id="_3-1-错误信息操作"><a href="#_3-1-错误信息操作" class="header-anchor">#</a> 3.1. 错误信息操作</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/*
+All validation rules included here provide a default error message
+which you can use for prototyping, because it is used
+when no specific message is provided.
+*/</span>
+<span class="token comment">//错误信息显示：优先级-最优到最低：</span>
+<span class="token comment">//The priorities are as follows:</span>
+<span class="token comment">//1. A custom message (passed by plugin options)</span>
+    messages<span class="token operator">:</span><span class="token punctuation">{</span>
+      name<span class="token operator">:</span><span class="token string">&quot;Name不能为空&quot;</span><span class="token punctuation">,</span>
+      email<span class="token operator">:</span><span class="token punctuation">{</span>
+          required<span class="token operator">:</span><span class="token string">&quot;E-mail不能为空&quot;</span><span class="token punctuation">,</span>
+          email<span class="token operator">:</span><span class="token string">&quot;E-mail地址不正确&quot;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token comment">//2. the element's title, --可以使用titile进行默认错误信息设置</span>
+<span class="token keyword">let</span> title<span class="token operator">=</span><span class="token string">'&lt;a title=&quot;message&quot;&gt;&lt;/a&gt;'</span><span class="token punctuation">;</span>
+<span class="token comment">//3. the default message.</span>
+<span class="token comment">//系统初始化的消息</span>
+
+<span class="token comment">//配置的错误信息-样式</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#commentForm&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>errorClass<span class="token operator">:</span><span class="token string">&quot;errorPrompt&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//通过errorClass属性实现错误信息样式显示调整位置上的调整：参考errorPlacement</span>
+</code></pre></div><h3 id="_3-2-支持-data-属性配置显示"><a href="#_3-2-支持-data-属性配置显示" class="header-anchor">#</a> 3.2. 支持 data 属性配置显示</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!--
+指定校验规则对应的错误信息：
+When using data attributes, you can set a generic message for all rules,
+or specific messages per rule
+--&gt;</span>
+<span class="token comment">&lt;!-- 指定校验规则以及错误信息提示 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+  <span class="token attr-name">data-rule-minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span>
+  <span class="token attr-name">data-rule-maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4<span class="token punctuation">&quot;</span></span>
+  <span class="token attr-name">data-msg-minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>At least two chars<span class="token punctuation">&quot;</span></span>
+  <span class="token attr-name">data-msg-maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>At most fours chars<span class="token punctuation">&quot;</span></span>
+<span class="token punctuation">/&gt;</span></span>
+</code></pre></div><h3 id="_3-3-窗体提交处理"><a href="#_3-3-窗体提交处理" class="header-anchor">#</a> 3.3. 窗体提交处理</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/*
+窗体提交---提交之后进行处理ajax等信息：submitHandler
+Form submit
+By default, the form submission is prevented when the form is invalid,
+and submitted as normal when it is valid. You can also handle the submission manually
+*/</span>
+<span class="token comment">//验证通过之后，才会执行submitHandler的function里的操作</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#form'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">submitHandler</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">form</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//todo valid operation</span>
+    <span class="token function">$</span><span class="token punctuation">(</span>form<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ajaxSubmit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//第二种方式</span>
+<span class="token keyword">var</span> validator <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#frmSockinCheckOrder'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> validRlt <span class="token operator">=</span> validator<span class="token punctuation">.</span><span class="token function">form</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>validRlt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  obj<span class="token punctuation">.</span><span class="token constant">ID</span> <span class="token operator">=</span> <span class="token operator">++</span>id
+  obj<span class="token punctuation">.</span>BoxNbr <span class="token operator">=</span> <span class="token string">'test00'</span> <span class="token operator">+</span> id
+  <span class="token keyword">this</span><span class="token punctuation">.</span>chkResult<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-4-自定义验证属性"><a href="#_3-4-自定义验证属性" class="header-anchor">#</a> 3.4. 自定义验证属性</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//添加的方法都支持：data属性操作</span>
+$<span class="token punctuation">.</span>validator<span class="token punctuation">.</span><span class="token function">addMethod</span><span class="token punctuation">(</span>
+  <span class="token string">'leQty'</span><span class="token punctuation">,</span>
+  <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> element<span class="token punctuation">,</span> param</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token comment">//当前输入值</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token comment">//当前验证的元素-DOM对象</span>
+    console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span> <span class="token comment">//Parma通过调用传入的参数信息,可以是数组或者单个数值</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">optional</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">Number</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token function">Number</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  $<span class="token punctuation">.</span>validator<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'输入数据&lt;=可用数量{0}'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token comment">//{0}就代表第一个参数</span>
+
+<span class="token comment">//输入小数或者整数</span>
+$<span class="token punctuation">.</span>validator<span class="token punctuation">.</span><span class="token function">addMethod</span><span class="token punctuation">(</span>
+  <span class="token string">'decimalNumber'</span><span class="token punctuation">,</span>
+  <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> element<span class="token punctuation">,</span> params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">optional</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token regex">/(^\d+[.]?\d+$)|(^\d+$)/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">'greater than or equal 0.'</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="_3-5-重置窗体状态"><a href="#_3-5-重置窗体状态" class="header-anchor">#</a> 3.5. 重置窗体状态</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> validator <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#myform'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+validator<span class="token punctuation">.</span><span class="token function">resetForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_3-6-内置的校验规则"><a href="#_3-6-内置的校验规则" class="header-anchor">#</a> 3.6. 内置的校验规则</h3> <ul><li><p><a href="https://jqueryvalidation.org/required-method" target="_blank" rel="noopener noreferrer"><code>required</code> – Makes the element required.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/remote-method" target="_blank" rel="noopener noreferrer"><code>remote</code> – Requests a resource to check the element for validity.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/minlength-method" target="_blank" rel="noopener noreferrer"><code>minlength</code> – Makes the element require a given minimum length.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/maxlength-method" target="_blank" rel="noopener noreferrer"><code>maxlength</code> – Makes the element require a given maximum length.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/rangelength-method" target="_blank" rel="noopener noreferrer"><code>rangelength</code> – Makes the element require a given value range.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/min-method" target="_blank" rel="noopener noreferrer"><code>min</code> – Makes the element require a given minimum.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/max-method" target="_blank" rel="noopener noreferrer"><code>max</code> – Makes the element require a given maximum.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/range-method" target="_blank" rel="noopener noreferrer"><code>range</code> – Makes the element require a given value range.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/step-method" target="_blank" rel="noopener noreferrer"><code>step</code> – Makes the element require a given step.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/email-method" target="_blank" rel="noopener noreferrer"><code>email</code> – Makes the element require a valid email<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/url-method" target="_blank" rel="noopener noreferrer"><code>url</code> – Makes the element require a valid url<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/date-method" target="_blank" rel="noopener noreferrer"><code>date</code> – Makes the element require a date.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/dateISO-method" target="_blank" rel="noopener noreferrer"><code>dateISO</code> – Makes the element require an ISO date.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/number-method" target="_blank" rel="noopener noreferrer"><code>number</code> – Makes the element require a decimal number.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://jqueryvalidation.org/digits-method" target="_blank" rel="noopener noreferrer"><code>digits</code> – Makes the element require digits only.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>只能是 0~的正整数</p></li> <li><p><a href="https://jqueryvalidation.org/equalTo-method" target="_blank" rel="noopener noreferrer"><code>equalTo</code> – Requires the element to be the same as another one<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li></ul> <p>需要更多的规则，参看 addtional.js 文件，或者自定义规则</p> <h2 id="最终示例"><a href="#最终示例" class="header-anchor">#</a> 最终示例</h2> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ie=edge<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./jquery.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./jquery-validation-1.13/js/jquery.validate.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+      <span class="token selector">.errorPrompt</span> <span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>commentForm<span class="token punctuation">&quot;</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>get<span class="token punctuation">&quot;</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>legend</span><span class="token punctuation">&gt;</span></span>
+          Please provide your name, email address (won't be published) and a
+          comment
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>legend</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>cName<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Name (required, at least 2 characters)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+            <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>cName<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>name<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">data-rule-maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">data-msg-maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>最大4<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">data-msg-minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>最小2<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">data-rule-minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">required</span>
+          <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>submit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>submit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Submit<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fieldset</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+      <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#commentForm'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          errorClass<span class="token operator">:</span> <span class="token string">'errorPrompt'</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">submitHandler</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">form</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// do other things for a valid form</span>
+            form<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment">//这里执行业务逻辑处理</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          debug<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          ignore<span class="token operator">:</span> <span class="token string">'.ignore'</span><span class="token punctuation">,</span> <span class="token comment">//绑定忽略验证项</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token comment">/*
+    $(&quot;.selector&quot;).validate({
+        rules:{
+            name:&quot;required&quot;,
+            email:{
+                required:true,
+                email:true
+            }
+        },
+        messages:{
+            name:&quot;Name不能为空&quot;,
+            email:{
+                required:&quot;E-mail不能为空&quot;,
+                email:&quot;E-mail地址不正确&quot;
+            }
+        }
+    })
+    */</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">Monday, September 14, 2020 7:20 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/frontend/extra/plugins/jquery-uniform.html" class="prev">
+        Jquery-uniform
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/docs/assets/js/app.e2bd7cff.js" defer></script><script src="/docs/assets/js/2.e252a344.js" defer></script><script src="/docs/assets/js/41.567bc6b7.js" defer></script><script src="/docs/assets/js/3.cd7f7020.js" defer></script>
+  </body>
+</html>

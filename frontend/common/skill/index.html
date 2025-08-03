@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>整理开发技巧 | Geeno&#39;s Docs</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/docs/img/apple-touch-icon-152x152.png">
+    <link rel="manifest" href="/docs/manifest.json">
+    <link rel="apple-touch-icon" href="/docs/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/docs/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/docs/assets/css/0.styles.684dd12f.css" as="style"><link rel="preload" href="/docs/assets/js/app.e2bd7cff.js" as="script"><link rel="preload" href="/docs/assets/js/2.e252a344.js" as="script"><link rel="preload" href="/docs/assets/js/33.b47c7c80.js" as="script"><link rel="preload" href="/docs/assets/js/3.cd7f7020.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.ab46e7c8.js"><link rel="prefetch" href="/docs/assets/js/11.bdd1bcbb.js"><link rel="prefetch" href="/docs/assets/js/12.7b4de923.js"><link rel="prefetch" href="/docs/assets/js/13.37bccccc.js"><link rel="prefetch" href="/docs/assets/js/14.ccde06f7.js"><link rel="prefetch" href="/docs/assets/js/15.b23050ba.js"><link rel="prefetch" href="/docs/assets/js/16.4d12f0d2.js"><link rel="prefetch" href="/docs/assets/js/17.861e12b5.js"><link rel="prefetch" href="/docs/assets/js/18.f0faa1d7.js"><link rel="prefetch" href="/docs/assets/js/19.0834b430.js"><link rel="prefetch" href="/docs/assets/js/20.72656569.js"><link rel="prefetch" href="/docs/assets/js/21.8ca58c04.js"><link rel="prefetch" href="/docs/assets/js/22.234b0a3f.js"><link rel="prefetch" href="/docs/assets/js/23.66c53c46.js"><link rel="prefetch" href="/docs/assets/js/24.5d15bf02.js"><link rel="prefetch" href="/docs/assets/js/25.d5fdf813.js"><link rel="prefetch" href="/docs/assets/js/26.d33c7f1e.js"><link rel="prefetch" href="/docs/assets/js/27.1a1589e4.js"><link rel="prefetch" href="/docs/assets/js/28.786bd896.js"><link rel="prefetch" href="/docs/assets/js/29.bd546282.js"><link rel="prefetch" href="/docs/assets/js/30.c5eb2db5.js"><link rel="prefetch" href="/docs/assets/js/31.7205f0f5.js"><link rel="prefetch" href="/docs/assets/js/32.4466c93b.js"><link rel="prefetch" href="/docs/assets/js/34.7bbdcb5f.js"><link rel="prefetch" href="/docs/assets/js/35.0028dd26.js"><link rel="prefetch" href="/docs/assets/js/36.7d36e51d.js"><link rel="prefetch" href="/docs/assets/js/37.3f983ca7.js"><link rel="prefetch" href="/docs/assets/js/38.04299ecf.js"><link rel="prefetch" href="/docs/assets/js/39.46bf1693.js"><link rel="prefetch" href="/docs/assets/js/4.c46d92ce.js"><link rel="prefetch" href="/docs/assets/js/40.2dfce58d.js"><link rel="prefetch" href="/docs/assets/js/41.567bc6b7.js"><link rel="prefetch" href="/docs/assets/js/42.2221e8d4.js"><link rel="prefetch" href="/docs/assets/js/43.3a5fa5d7.js"><link rel="prefetch" href="/docs/assets/js/44.25c83621.js"><link rel="prefetch" href="/docs/assets/js/45.8f7fe9e5.js"><link rel="prefetch" href="/docs/assets/js/46.6117f0ab.js"><link rel="prefetch" href="/docs/assets/js/47.4ed69f2e.js"><link rel="prefetch" href="/docs/assets/js/48.4aa7ddad.js"><link rel="prefetch" href="/docs/assets/js/49.81f15faf.js"><link rel="prefetch" href="/docs/assets/js/5.38b3e286.js"><link rel="prefetch" href="/docs/assets/js/50.1b516ac1.js"><link rel="prefetch" href="/docs/assets/js/51.dd6e884f.js"><link rel="prefetch" href="/docs/assets/js/52.06ecf575.js"><link rel="prefetch" href="/docs/assets/js/53.18160f00.js"><link rel="prefetch" href="/docs/assets/js/54.53e6959c.js"><link rel="prefetch" href="/docs/assets/js/55.6d177f20.js"><link rel="prefetch" href="/docs/assets/js/56.16099169.js"><link rel="prefetch" href="/docs/assets/js/57.767a8adc.js"><link rel="prefetch" href="/docs/assets/js/58.61f61563.js"><link rel="prefetch" href="/docs/assets/js/59.80bd23aa.js"><link rel="prefetch" href="/docs/assets/js/6.a8391b77.js"><link rel="prefetch" href="/docs/assets/js/60.a6ba1e81.js"><link rel="prefetch" href="/docs/assets/js/61.8cbb2e0f.js"><link rel="prefetch" href="/docs/assets/js/62.27ad5fd9.js"><link rel="prefetch" href="/docs/assets/js/7.a7879395.js"><link rel="prefetch" href="/docs/assets/js/8.ce81400e.js"><link rel="prefetch" href="/docs/assets/js/9.428519ae.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.684dd12f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Geeno's Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link router-link-exact-active router-link-active">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link router-link-exact-active router-link-active">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>skill</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/frontend/common/skill/" class="active sidebar-link">整理开发技巧</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/frontend/common/skill/#网站音频播放" class="sidebar-link">网站音频播放</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/common/skill/#script-标签实现插件引入" class="sidebar-link">script 标签实现插件引入</a></li><li class="sidebar-sub-header"><a href="/docs/frontend/common/skill/#正则表达式生成" class="sidebar-link">正则表达式生成</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="整理开发技巧"><a href="#整理开发技巧" class="header-anchor">#</a> 整理开发技巧</h1> <h2 id="网站音频播放"><a href="#网站音频播放" class="header-anchor">#</a> 网站音频播放</h2> <ul><li><p>直接播放音频文件</p> <blockquote><p><a href="https://github.com/goldfire/howler.js" target="_blank" rel="noopener noreferrer">howler<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote></li></ul> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./assets/lib/howler.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>test<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+      document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> sound <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Howl</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          src<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'/assets/media/1.wav'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          autoplay<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">onend</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Finished!'</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>调用浏览器 API 实时播放</li></ul> <blockquote><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/SpeechSynthesis" target="_blank" rel="noopener noreferrer">参考链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//这是实验性的功能，2020-09-12 星期六  10:53:01</span>
+<span class="token comment">//还在部分浏览器进行试验中。</span>
+<span class="token keyword">var</span> synth <span class="token operator">=</span> window<span class="token punctuation">.</span>speechSynthesis
+<span class="token keyword">var</span> utterThis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SpeechSynthesisUtterance</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>
+synth<span class="token punctuation">.</span><span class="token function">speak</span><span class="token punctuation">(</span>utterThis<span class="token punctuation">)</span>
+</code></pre></div><h2 id="script-标签实现插件引入"><a href="#script-标签实现插件引入" class="header-anchor">#</a> script 标签实现插件引入</h2> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span>
+    <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/script/picSwitch.js<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>picSwitch<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">obj</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>#pic<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">option</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>{&quot;speed&quot;:&quot;400&quot;,&quot;derection&quot;:&quot;left&quot;}<span class="token punctuation">'</span></span>
+  <span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pic<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    //这里是具体结构
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code>$<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function-variable function">picSwitch</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">//这里是图片切换的代码</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//写好插件后就直接调用</span>
+  <span class="token keyword">var</span> script <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#picSwitch'</span><span class="token punctuation">)</span>，<span class="token comment">//标签上的id</span>
+    selector <span class="token operator">=</span> script<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'selector'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    option <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>script<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'option'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//标签上的是字符串需要转为json对象</span>
+    <span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">picSwitch</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="正则表达式生成"><a href="#正则表达式生成" class="header-anchor">#</a> 正则表达式生成</h2> <blockquote><p>使用<code>FluentAPI</code>的方式，生成正则表达式<br> <a href="https://github.com/francisrstokes/super-expressive" target="_blank" rel="noopener noreferrer">参考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">Saturday, October 24, 2020 9:54 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/docs/assets/js/app.e2bd7cff.js" defer></script><script src="/docs/assets/js/2.e252a344.js" defer></script><script src="/docs/assets/js/33.b47c7c80.js" defer></script><script src="/docs/assets/js/3.cd7f7020.js" defer></script>
+  </body>
+</html>

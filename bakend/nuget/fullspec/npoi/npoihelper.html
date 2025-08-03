@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NPOI 整理 | Geeno&#39;s Docs</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/docs/img/apple-touch-icon-152x152.png">
+    <link rel="manifest" href="/docs/manifest.json">
+    <link rel="apple-touch-icon" href="/docs/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/docs/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/docs/assets/css/0.styles.684dd12f.css" as="style"><link rel="preload" href="/docs/assets/js/app.e2bd7cff.js" as="script"><link rel="preload" href="/docs/assets/js/2.e252a344.js" as="script"><link rel="preload" href="/docs/assets/js/27.1a1589e4.js" as="script"><link rel="preload" href="/docs/assets/js/3.cd7f7020.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.ab46e7c8.js"><link rel="prefetch" href="/docs/assets/js/11.bdd1bcbb.js"><link rel="prefetch" href="/docs/assets/js/12.7b4de923.js"><link rel="prefetch" href="/docs/assets/js/13.37bccccc.js"><link rel="prefetch" href="/docs/assets/js/14.ccde06f7.js"><link rel="prefetch" href="/docs/assets/js/15.b23050ba.js"><link rel="prefetch" href="/docs/assets/js/16.4d12f0d2.js"><link rel="prefetch" href="/docs/assets/js/17.861e12b5.js"><link rel="prefetch" href="/docs/assets/js/18.f0faa1d7.js"><link rel="prefetch" href="/docs/assets/js/19.0834b430.js"><link rel="prefetch" href="/docs/assets/js/20.72656569.js"><link rel="prefetch" href="/docs/assets/js/21.8ca58c04.js"><link rel="prefetch" href="/docs/assets/js/22.234b0a3f.js"><link rel="prefetch" href="/docs/assets/js/23.66c53c46.js"><link rel="prefetch" href="/docs/assets/js/24.5d15bf02.js"><link rel="prefetch" href="/docs/assets/js/25.d5fdf813.js"><link rel="prefetch" href="/docs/assets/js/26.d33c7f1e.js"><link rel="prefetch" href="/docs/assets/js/28.786bd896.js"><link rel="prefetch" href="/docs/assets/js/29.bd546282.js"><link rel="prefetch" href="/docs/assets/js/30.c5eb2db5.js"><link rel="prefetch" href="/docs/assets/js/31.7205f0f5.js"><link rel="prefetch" href="/docs/assets/js/32.4466c93b.js"><link rel="prefetch" href="/docs/assets/js/33.b47c7c80.js"><link rel="prefetch" href="/docs/assets/js/34.7bbdcb5f.js"><link rel="prefetch" href="/docs/assets/js/35.0028dd26.js"><link rel="prefetch" href="/docs/assets/js/36.7d36e51d.js"><link rel="prefetch" href="/docs/assets/js/37.3f983ca7.js"><link rel="prefetch" href="/docs/assets/js/38.04299ecf.js"><link rel="prefetch" href="/docs/assets/js/39.46bf1693.js"><link rel="prefetch" href="/docs/assets/js/4.c46d92ce.js"><link rel="prefetch" href="/docs/assets/js/40.2dfce58d.js"><link rel="prefetch" href="/docs/assets/js/41.567bc6b7.js"><link rel="prefetch" href="/docs/assets/js/42.2221e8d4.js"><link rel="prefetch" href="/docs/assets/js/43.3a5fa5d7.js"><link rel="prefetch" href="/docs/assets/js/44.25c83621.js"><link rel="prefetch" href="/docs/assets/js/45.8f7fe9e5.js"><link rel="prefetch" href="/docs/assets/js/46.6117f0ab.js"><link rel="prefetch" href="/docs/assets/js/47.4ed69f2e.js"><link rel="prefetch" href="/docs/assets/js/48.4aa7ddad.js"><link rel="prefetch" href="/docs/assets/js/49.81f15faf.js"><link rel="prefetch" href="/docs/assets/js/5.38b3e286.js"><link rel="prefetch" href="/docs/assets/js/50.1b516ac1.js"><link rel="prefetch" href="/docs/assets/js/51.dd6e884f.js"><link rel="prefetch" href="/docs/assets/js/52.06ecf575.js"><link rel="prefetch" href="/docs/assets/js/53.18160f00.js"><link rel="prefetch" href="/docs/assets/js/54.53e6959c.js"><link rel="prefetch" href="/docs/assets/js/55.6d177f20.js"><link rel="prefetch" href="/docs/assets/js/56.16099169.js"><link rel="prefetch" href="/docs/assets/js/57.767a8adc.js"><link rel="prefetch" href="/docs/assets/js/58.61f61563.js"><link rel="prefetch" href="/docs/assets/js/59.80bd23aa.js"><link rel="prefetch" href="/docs/assets/js/6.a8391b77.js"><link rel="prefetch" href="/docs/assets/js/60.a6ba1e81.js"><link rel="prefetch" href="/docs/assets/js/61.8cbb2e0f.js"><link rel="prefetch" href="/docs/assets/js/62.27ad5fd9.js"><link rel="prefetch" href="/docs/assets/js/7.a7879395.js"><link rel="prefetch" href="/docs/assets/js/8.ce81400e.js"><link rel="prefetch" href="/docs/assets/js/9.428519ae.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.684dd12f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Geeno's Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link router-link-active">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link router-link-active">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>npoi</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/bakend/nuget/fullspec/npoi/" class="sidebar-link">NPOI 的使用</a></li><li><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html" class="active sidebar-link">NPOI 整理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#公共方法" class="sidebar-link">公共方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#createbasicbook" class="sidebar-link">CreateBasicBook</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setborderstyle" class="sidebar-link">SetBorderStyle</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setbackground" class="sidebar-link">SetBackground</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#getcolourbyrgb" class="sidebar-link">GetColourByRGB</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setfont" class="sidebar-link">SetFont</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setautosizecolumn" class="sidebar-link">SetAutoSizeColumn</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#unioncells" class="sidebar-link">UnionCells</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setautofilter" class="sidebar-link">SetAutoFilter</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setrowheight" class="sidebar-link">SetRowHeight</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setalignment" class="sidebar-link">SetAlignment</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setformula" class="sidebar-link">SetFormula</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#setcolumnwidth" class="sidebar-link">SetColumnWidth</a></li></ul></li><li class="sidebar-sub-header"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper.html#完整代码" class="sidebar-link">完整代码</a></li></ul></li><li><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper-demo.html" class="sidebar-link">读取示例</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="npoi-整理"><a href="#npoi-整理" class="header-anchor">#</a> NPOI 整理</h1> <h2 id="公共方法"><a href="#公共方法" class="header-anchor">#</a> 公共方法</h2> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>EntityFrameworkCore<span class="token punctuation">.</span>Storage</span><span class="token punctuation">;</span>
+
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>HSSF<span class="token punctuation">.</span>UserModel</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>HSSF<span class="token punctuation">.</span>Util</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>UserModel</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>Util</span><span class="token punctuation">;</span>
+
+<span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Linq</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Threading<span class="token punctuation">.</span>Tasks</span><span class="token punctuation">;</span>
+
+<span class="token keyword">namespace</span> <span class="token namespace">NpoiDemo<span class="token punctuation">.</span>Common</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">using</span> <span class="token class-name">S</span> <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NpoiHelper</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">//code here</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="createbasicbook"><a href="#createbasicbook" class="header-anchor">#</a> CreateBasicBook</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 创建book的基础方法</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">CreateBasicBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//2003格式</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">HSSFWorkbook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> sheet <span class="token operator">=</span> book<span class="token punctuation">.</span><span class="token function">CreateSheet</span><span class="token punctuation">(</span><span class="token string">&quot;book&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> row <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> cell <span class="token operator">=</span> row<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> cellStyle <span class="token operator">=</span> book<span class="token punctuation">.</span><span class="token function">CreateCellStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> font <span class="token operator">=</span> book<span class="token punctuation">.</span><span class="token function">CreateFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="setborderstyle"><a href="#setborderstyle" class="header-anchor">#</a> SetBorderStyle</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 设置单元格边框线,默认Thin</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;cellStyle&quot;&gt;&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetBorderStyle</span><span class="token punctuation">(</span><span class="token class-name">ICellStyle</span> cellStyle<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cellStyle<span class="token punctuation">.</span>BorderBottom <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderLeft <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderRight <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderTop <span class="token operator">=</span> BorderStyle<span class="token punctuation">.</span>Thin<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 设置单元格边框线,需要传入borderStyle</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;cellStyle&quot;&gt;&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetBorderStyle</span><span class="token punctuation">(</span><span class="token class-name">ICellStyle</span> cellStyle<span class="token punctuation">,</span> <span class="token class-name">BorderStyle</span> border<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cellStyle<span class="token punctuation">.</span>BorderBottom <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderLeft <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderRight <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderTop <span class="token operator">=</span> border<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="setbackground"><a href="#setbackground" class="header-anchor">#</a> SetBackground</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 设置前景色和背景色</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;cellStyle&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;foreColor&quot;&gt;HSSFColor.Black.Index&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;bgColor&quot;&gt;&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetBackground</span><span class="token punctuation">(</span><span class="token class-name">ICellStyle</span> cellStyle<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">short</span></span> foreColor<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">short</span></span> bgColor<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cellStyle<span class="token punctuation">.</span>FillBackgroundColor <span class="token operator">=</span> foreColor<span class="token punctuation">;</span>
+    cellStyle<span class="token punctuation">.</span>FillForegroundColor <span class="token operator">=</span> bgColor<span class="token punctuation">;</span>
+    cellStyle<span class="token punctuation">.</span>FillPattern <span class="token operator">=</span> FillPattern<span class="token punctuation">.</span>SolidForeground<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="getcolourbyrgb"><a href="#getcolourbyrgb" class="header-anchor">#</a> GetColourByRGB</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 通过RGB获取颜色索引</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;workbook&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;r&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;g&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;b&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;returns&gt;&lt;/returns&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">short</span></span> <span class="token function">GetColourByRGB</span><span class="token punctuation">(</span><span class="token class-name">HSSFWorkbook</span> workbook<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">byte</span></span> r<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">byte</span></span> g<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">byte</span></span> b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> palette <span class="token operator">=</span> workbook<span class="token punctuation">.</span><span class="token function">GetCustomPalette</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> hssfColor <span class="token operator">=</span> palette<span class="token punctuation">.</span><span class="token function">FindColor</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>hssfColor <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        palette<span class="token punctuation">.</span><span class="token function">SetColorAtIndex</span><span class="token punctuation">(</span>HSSFColor<span class="token punctuation">.</span>Lavender<span class="token punctuation">.</span>Index<span class="token punctuation">,</span> r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        hssfColor <span class="token operator">=</span> palette<span class="token punctuation">.</span><span class="token function">GetColor</span><span class="token punctuation">(</span>HSSFColor<span class="token punctuation">.</span>Lavender<span class="token punctuation">.</span>Index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>hssfColor <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> hssfColor<span class="token punctuation">.</span>Indexed<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">short</span><span class="token punctuation">.</span>MinValue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="setfont"><a href="#setfont" class="header-anchor">#</a> SetFont</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 设置字体</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;workbook&quot;&gt;book对象&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;cellStyle&quot;&gt;单元格对象&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;fontName&quot;&gt;字体名称&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;size&quot;&gt;字体大小&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;isBold&quot;&gt;加粗&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;isItalic&quot;&gt;加谢&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;underlineType&quot;&gt;下划线&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetFont</span><span class="token punctuation">(</span><span class="token class-name">HSSFWorkbook</span> workbook<span class="token punctuation">,</span> <span class="token class-name">ICellStyle</span> cellStyle<span class="token punctuation">,</span> <span class="token class-name">S</span> fontName <span class="token operator">=</span> <span class="token string">&quot;等线&quot;</span><span class="token punctuation">,</span>
+    <span class="token class-name"><span class="token keyword">double</span></span> size <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> isBold <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> isItalic <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token class-name">FontUnderlineType</span> underlineType <span class="token operator">=</span> FontUnderlineType<span class="token punctuation">.</span>None<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> font <span class="token operator">=</span> workbook<span class="token punctuation">.</span><span class="token function">CreateFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    font<span class="token punctuation">.</span>FontName <span class="token operator">=</span> fontName<span class="token punctuation">;</span>
+    font<span class="token punctuation">.</span>FontHeightInPoints <span class="token operator">=</span> size<span class="token punctuation">;</span>
+    font<span class="token punctuation">.</span>IsBold <span class="token operator">=</span> isBold<span class="token punctuation">;</span>
+    font<span class="token punctuation">.</span>IsItalic <span class="token operator">=</span> isItalic<span class="token punctuation">;</span>
+    font<span class="token punctuation">.</span>Underline <span class="token operator">=</span> underlineType<span class="token punctuation">;</span>
+    cellStyle<span class="token punctuation">.</span><span class="token function">SetFont</span><span class="token punctuation">(</span>font<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="setautosizecolumn"><a href="#setautosizecolumn" class="header-anchor">#</a> SetAutoSizeColumn</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 自适应列宽</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;sheet&quot;&gt;表格对象&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;totalCols&quot;&gt;总共的列数&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetAutoSizeColumn</span><span class="token punctuation">(</span><span class="token class-name">ISheet</span> sheet<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> totalCols<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> totalCols<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+    <span class="token punctuation">{</span>
+        sheet<span class="token punctuation">.</span><span class="token function">AutoSizeColumn</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="unioncells"><a href="#unioncells" class="header-anchor">#</a> UnionCells</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 指定区域合并单元格,都是闭区间，索引0开始</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;sheet&quot;&gt;表格对象&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;firstRowIndex&quot;&gt;开始行&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;lastRowIndex&quot;&gt;结束行&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;firstColIndex&quot;&gt;开始列&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;lastColIndex&quot;&gt;结束列&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">UnionCells</span><span class="token punctuation">(</span><span class="token class-name">ISheet</span> sheet<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> firstRowIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> lastRowIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> firstColIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> lastColIndex<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    sheet<span class="token punctuation">.</span><span class="token function">AddMergedRegion</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">CellRangeAddress</span><span class="token punctuation">(</span>firstRowIndex<span class="token punctuation">,</span> lastRowIndex<span class="token punctuation">,</span> firstColIndex<span class="token punctuation">,</span> lastColIndex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="setautofilter"><a href="#setautofilter" class="header-anchor">#</a> SetAutoFilter</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 数据自动筛选</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;sheet&quot;&gt;表格对象&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;reference&quot;&gt;单元格的引用字符串表达方式&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetAutoFilter</span><span class="token punctuation">(</span><span class="token class-name">ISheet</span> sheet<span class="token punctuation">,</span> <span class="token class-name">S</span> reference<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    sheet<span class="token punctuation">.</span><span class="token function">SetAutoFilter</span><span class="token punctuation">(</span>CellRangeAddress<span class="token punctuation">.</span><span class="token function">ValueOf</span><span class="token punctuation">(</span>reference<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="setrowheight"><a href="#setrowheight" class="header-anchor">#</a> SetRowHeight</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 设置行高</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;row&quot;&gt;Irow对象&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;height&quot;&gt;高度&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetRowHeight</span><span class="token punctuation">(</span><span class="token class-name">IRow</span> row<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> height<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    row<span class="token punctuation">.</span>HeightInPoints <span class="token operator">=</span> height<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="setalignment"><a href="#setalignment" class="header-anchor">#</a> SetAlignment</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 设置单元格的水平和垂直对齐方式</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;cell&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;horizontal&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;vertical&quot;&gt;&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetAlignment</span><span class="token punctuation">(</span><span class="token class-name">ICellStyle</span> cell<span class="token punctuation">,</span> <span class="token class-name">HorizontalAlignment</span> horizontal<span class="token punctuation">,</span> <span class="token class-name">VerticalAlignment</span> vertical<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    cell<span class="token punctuation">.</span>Alignment <span class="token operator">=</span> horizontal<span class="token punctuation">;</span>
+    cell<span class="token punctuation">.</span>VerticalAlignment <span class="token operator">=</span> vertical<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="setformula"><a href="#setformula" class="header-anchor">#</a> SetFormula</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 公式设置</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;cell&quot;&gt;单元格&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;formula&quot;&gt;excel的计算公式就行&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetFormula</span><span class="token punctuation">(</span><span class="token class-name">ICell</span> cell<span class="token punctuation">,</span> <span class="token class-name">S</span> formula<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//$&quot;SUM(A1,A3)&quot;</span>
+    cell<span class="token punctuation">.</span><span class="token function">SetCellFormula</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="setcolumnwidth"><a href="#setcolumnwidth" class="header-anchor">#</a> SetColumnWidth</h3> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/// &lt;summary&gt;</span>
+<span class="token comment">/// 设置列宽，列宽按照字符进行计算的所以有个固定字符256</span>
+<span class="token comment">/// &lt;/summary&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;sheet&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;colIndex&quot;&gt;&lt;/param&gt;</span>
+<span class="token comment">/// &lt;param name=&quot;colwidthChar&quot;&gt;&lt;/param&gt;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetColumnWidth</span><span class="token punctuation">(</span><span class="token class-name">ISheet</span> sheet<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> colIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> colwidthChar<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    sheet<span class="token punctuation">.</span><span class="token function">SetColumnWidth</span><span class="token punctuation">(</span>colIndex<span class="token punctuation">,</span> colwidthChar <span class="token operator">*</span> <span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="完整代码"><a href="#完整代码" class="header-anchor">#</a> 完整代码</h2> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>EntityFrameworkCore<span class="token punctuation">.</span>Storage</span><span class="token punctuation">;</span>
+
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>HSSF<span class="token punctuation">.</span>UserModel</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>HSSF<span class="token punctuation">.</span>Util</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>UserModel</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">NPOI<span class="token punctuation">.</span>SS<span class="token punctuation">.</span>Util</span><span class="token punctuation">;</span>
+
+<span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Linq</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Threading<span class="token punctuation">.</span>Tasks</span><span class="token punctuation">;</span>
+
+<span class="token keyword">namespace</span> <span class="token namespace">NpoiDemo<span class="token punctuation">.</span>Common</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">using</span> <span class="token class-name">S</span> <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NpoiHelper</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 创建book的基础方法</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">CreateBasicBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">//2003格式</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">HSSFWorkbook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> sheet <span class="token operator">=</span> book<span class="token punctuation">.</span><span class="token function">CreateSheet</span><span class="token punctuation">(</span><span class="token string">&quot;book&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> row <span class="token operator">=</span> sheet<span class="token punctuation">.</span><span class="token function">CreateRow</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> cell <span class="token operator">=</span> row<span class="token punctuation">.</span><span class="token function">CreateCell</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> cellStyle <span class="token operator">=</span> book<span class="token punctuation">.</span><span class="token function">CreateCellStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> font <span class="token operator">=</span> book<span class="token punctuation">.</span><span class="token function">CreateFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 设置单元格边框线,需要传入borderStyle</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;cellStyle&quot;&gt;&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetBorderStyle</span><span class="token punctuation">(</span><span class="token class-name">ICellStyle</span> cellStyle<span class="token punctuation">,</span> <span class="token class-name">BorderStyle</span> border<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            cellStyle<span class="token punctuation">.</span>BorderBottom <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderLeft <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderRight <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderTop <span class="token operator">=</span> border<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 设置单元格边框线,默认Thin</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;cellStyle&quot;&gt;&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetBorderStyle</span><span class="token punctuation">(</span><span class="token class-name">ICellStyle</span> cellStyle<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            cellStyle<span class="token punctuation">.</span>BorderBottom <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderLeft <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderRight <span class="token operator">=</span> cellStyle<span class="token punctuation">.</span>BorderTop <span class="token operator">=</span> BorderStyle<span class="token punctuation">.</span>Thin<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 设置前景色和背景色</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;cellStyle&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;foreColor&quot;&gt;HSSFColor.Black.Index&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;bgColor&quot;&gt;&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetBackground</span><span class="token punctuation">(</span><span class="token class-name">ICellStyle</span> cellStyle<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">short</span></span> foreColor<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">short</span></span> bgColor<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            cellStyle<span class="token punctuation">.</span>FillBackgroundColor <span class="token operator">=</span> foreColor<span class="token punctuation">;</span>
+            cellStyle<span class="token punctuation">.</span>FillForegroundColor <span class="token operator">=</span> bgColor<span class="token punctuation">;</span>
+            cellStyle<span class="token punctuation">.</span>FillPattern <span class="token operator">=</span> FillPattern<span class="token punctuation">.</span>SolidForeground<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 通过RGB获取颜色索引</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;workbook&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;r&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;g&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;b&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;returns&gt;&lt;/returns&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">short</span></span> <span class="token function">GetColourByRGB</span><span class="token punctuation">(</span><span class="token class-name">HSSFWorkbook</span> workbook<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">byte</span></span> r<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">byte</span></span> g<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">byte</span></span> b<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> palette <span class="token operator">=</span> workbook<span class="token punctuation">.</span><span class="token function">GetCustomPalette</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> hssfColor <span class="token operator">=</span> palette<span class="token punctuation">.</span><span class="token function">FindColor</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>hssfColor <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                palette<span class="token punctuation">.</span><span class="token function">SetColorAtIndex</span><span class="token punctuation">(</span>HSSFColor<span class="token punctuation">.</span>Lavender<span class="token punctuation">.</span>Index<span class="token punctuation">,</span> r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                hssfColor <span class="token operator">=</span> palette<span class="token punctuation">.</span><span class="token function">GetColor</span><span class="token punctuation">(</span>HSSFColor<span class="token punctuation">.</span>Lavender<span class="token punctuation">.</span>Index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>hssfColor <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> hssfColor<span class="token punctuation">.</span>Indexed<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">short</span><span class="token punctuation">.</span>MinValue<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 设置字体</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;workbook&quot;&gt;book对象&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;cellStyle&quot;&gt;单元格对象&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;fontName&quot;&gt;字体名称&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;size&quot;&gt;字体大小&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;isBold&quot;&gt;加粗&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;isItalic&quot;&gt;加谢&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;underlineType&quot;&gt;下划线&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetFont</span><span class="token punctuation">(</span><span class="token class-name">HSSFWorkbook</span> workbook<span class="token punctuation">,</span> <span class="token class-name">ICellStyle</span> cellStyle<span class="token punctuation">,</span> <span class="token class-name">S</span> fontName <span class="token operator">=</span> <span class="token string">&quot;等线&quot;</span><span class="token punctuation">,</span>
+            <span class="token class-name"><span class="token keyword">double</span></span> size <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> isBold <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">bool</span></span> isItalic <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token class-name">FontUnderlineType</span> underlineType <span class="token operator">=</span> FontUnderlineType<span class="token punctuation">.</span>None<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> font <span class="token operator">=</span> workbook<span class="token punctuation">.</span><span class="token function">CreateFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>FontName <span class="token operator">=</span> fontName<span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>FontHeightInPoints <span class="token operator">=</span> size<span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>IsBold <span class="token operator">=</span> isBold<span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>IsItalic <span class="token operator">=</span> isItalic<span class="token punctuation">;</span>
+            font<span class="token punctuation">.</span>Underline <span class="token operator">=</span> underlineType<span class="token punctuation">;</span>
+            cellStyle<span class="token punctuation">.</span><span class="token function">SetFont</span><span class="token punctuation">(</span>font<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 自适应列宽</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;sheet&quot;&gt;表格对象&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;totalCols&quot;&gt;总共的列数&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetAutoSizeColumn</span><span class="token punctuation">(</span><span class="token class-name">ISheet</span> sheet<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> totalCols<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            Enumerable<span class="token punctuation">.</span><span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> totalCols<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ForEach</span><span class="token punctuation">(</span>x <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                sheet<span class="token punctuation">.</span><span class="token function">AutoSizeColumn</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 指定区域合并单元格,都是闭区间，索引0开始</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;sheet&quot;&gt;表格对象&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;firstRowIndex&quot;&gt;开始行&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;lastRowIndex&quot;&gt;结束行&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;firstColIndex&quot;&gt;开始列&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;lastColIndex&quot;&gt;结束列&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">UnionCells</span><span class="token punctuation">(</span><span class="token class-name">ISheet</span> sheet<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> firstRowIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> lastRowIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> firstColIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> lastColIndex<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            sheet<span class="token punctuation">.</span><span class="token function">AddMergedRegion</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">CellRangeAddress</span><span class="token punctuation">(</span>firstRowIndex<span class="token punctuation">,</span> lastRowIndex<span class="token punctuation">,</span> firstColIndex<span class="token punctuation">,</span> lastColIndex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 数据自动筛选</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;sheet&quot;&gt;表格对象&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;reference&quot;&gt;单元格的引用字符串表达方式&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetAutoFilter</span><span class="token punctuation">(</span><span class="token class-name">ISheet</span> sheet<span class="token punctuation">,</span> <span class="token class-name">S</span> reference<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            sheet<span class="token punctuation">.</span><span class="token function">SetAutoFilter</span><span class="token punctuation">(</span>CellRangeAddress<span class="token punctuation">.</span><span class="token function">ValueOf</span><span class="token punctuation">(</span>reference<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 设置行高</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;row&quot;&gt;Irow对象&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;height&quot;&gt;高度&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetRowHeight</span><span class="token punctuation">(</span><span class="token class-name">IRow</span> row<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">float</span></span> height<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            row<span class="token punctuation">.</span>HeightInPoints <span class="token operator">=</span> height<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 设置单元格的水平和垂直对齐方式</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;cell&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;horizontal&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;vertical&quot;&gt;&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetAlignment</span><span class="token punctuation">(</span><span class="token class-name">ICellStyle</span> cell<span class="token punctuation">,</span> <span class="token class-name">HorizontalAlignment</span> horizontal<span class="token punctuation">,</span> <span class="token class-name">VerticalAlignment</span> vertical<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            cell<span class="token punctuation">.</span>Alignment <span class="token operator">=</span> horizontal<span class="token punctuation">;</span>
+            cell<span class="token punctuation">.</span>VerticalAlignment <span class="token operator">=</span> vertical<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 公式设置</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;cell&quot;&gt;单元格&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;formula&quot;&gt;excel的计算公式就行&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetFormula</span><span class="token punctuation">(</span><span class="token class-name">ICell</span> cell<span class="token punctuation">,</span> <span class="token class-name">S</span> formula<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">//$&quot;SUM(A1,A3)&quot;</span>
+            cell<span class="token punctuation">.</span><span class="token function">SetCellFormula</span><span class="token punctuation">(</span>formula<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">/// &lt;summary&gt;</span>
+        <span class="token comment">/// 设置列宽，列宽按照字符进行计算的所以有个固定字符256</span>
+        <span class="token comment">/// &lt;/summary&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;sheet&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;colIndex&quot;&gt;&lt;/param&gt;</span>
+        <span class="token comment">/// &lt;param name=&quot;colwidthChar&quot;&gt;&lt;/param&gt;</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">SetColumnWidth</span><span class="token punctuation">(</span><span class="token class-name">ISheet</span> sheet<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> colIndex<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">int</span></span> colwidthChar<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            sheet<span class="token punctuation">.</span><span class="token function">SetColumnWidth</span><span class="token punctuation">(</span>colIndex<span class="token punctuation">,</span> colwidthChar <span class="token operator">*</span> <span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">Saturday, July 25, 2020 1:16 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/bakend/nuget/fullspec/npoi/" class="prev router-link-active">
+        NPOI 的使用
+      </a></span> <span class="next"><a href="/docs/bakend/nuget/fullspec/npoi/npoihelper-demo.html">
+        读取示例
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/docs/assets/js/app.e2bd7cff.js" defer></script><script src="/docs/assets/js/2.e252a344.js" defer></script><script src="/docs/assets/js/27.1a1589e4.js" defer></script><script src="/docs/assets/js/3.cd7f7020.js" defer></script>
+  </body>
+</html>

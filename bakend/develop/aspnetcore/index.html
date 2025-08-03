@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>开发整理问题 | Geeno&#39;s Docs</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/docs/img/apple-touch-icon-152x152.png">
+    <link rel="manifest" href="/docs/manifest.json">
+    <link rel="apple-touch-icon" href="/docs/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/docs/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/docs/assets/css/0.styles.684dd12f.css" as="style"><link rel="preload" href="/docs/assets/js/app.e2bd7cff.js" as="script"><link rel="preload" href="/docs/assets/js/2.e252a344.js" as="script"><link rel="preload" href="/docs/assets/js/13.37bccccc.js" as="script"><link rel="preload" href="/docs/assets/js/3.cd7f7020.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.ab46e7c8.js"><link rel="prefetch" href="/docs/assets/js/11.bdd1bcbb.js"><link rel="prefetch" href="/docs/assets/js/12.7b4de923.js"><link rel="prefetch" href="/docs/assets/js/14.ccde06f7.js"><link rel="prefetch" href="/docs/assets/js/15.b23050ba.js"><link rel="prefetch" href="/docs/assets/js/16.4d12f0d2.js"><link rel="prefetch" href="/docs/assets/js/17.861e12b5.js"><link rel="prefetch" href="/docs/assets/js/18.f0faa1d7.js"><link rel="prefetch" href="/docs/assets/js/19.0834b430.js"><link rel="prefetch" href="/docs/assets/js/20.72656569.js"><link rel="prefetch" href="/docs/assets/js/21.8ca58c04.js"><link rel="prefetch" href="/docs/assets/js/22.234b0a3f.js"><link rel="prefetch" href="/docs/assets/js/23.66c53c46.js"><link rel="prefetch" href="/docs/assets/js/24.5d15bf02.js"><link rel="prefetch" href="/docs/assets/js/25.d5fdf813.js"><link rel="prefetch" href="/docs/assets/js/26.d33c7f1e.js"><link rel="prefetch" href="/docs/assets/js/27.1a1589e4.js"><link rel="prefetch" href="/docs/assets/js/28.786bd896.js"><link rel="prefetch" href="/docs/assets/js/29.bd546282.js"><link rel="prefetch" href="/docs/assets/js/30.c5eb2db5.js"><link rel="prefetch" href="/docs/assets/js/31.7205f0f5.js"><link rel="prefetch" href="/docs/assets/js/32.4466c93b.js"><link rel="prefetch" href="/docs/assets/js/33.b47c7c80.js"><link rel="prefetch" href="/docs/assets/js/34.7bbdcb5f.js"><link rel="prefetch" href="/docs/assets/js/35.0028dd26.js"><link rel="prefetch" href="/docs/assets/js/36.7d36e51d.js"><link rel="prefetch" href="/docs/assets/js/37.3f983ca7.js"><link rel="prefetch" href="/docs/assets/js/38.04299ecf.js"><link rel="prefetch" href="/docs/assets/js/39.46bf1693.js"><link rel="prefetch" href="/docs/assets/js/4.c46d92ce.js"><link rel="prefetch" href="/docs/assets/js/40.2dfce58d.js"><link rel="prefetch" href="/docs/assets/js/41.567bc6b7.js"><link rel="prefetch" href="/docs/assets/js/42.2221e8d4.js"><link rel="prefetch" href="/docs/assets/js/43.3a5fa5d7.js"><link rel="prefetch" href="/docs/assets/js/44.25c83621.js"><link rel="prefetch" href="/docs/assets/js/45.8f7fe9e5.js"><link rel="prefetch" href="/docs/assets/js/46.6117f0ab.js"><link rel="prefetch" href="/docs/assets/js/47.4ed69f2e.js"><link rel="prefetch" href="/docs/assets/js/48.4aa7ddad.js"><link rel="prefetch" href="/docs/assets/js/49.81f15faf.js"><link rel="prefetch" href="/docs/assets/js/5.38b3e286.js"><link rel="prefetch" href="/docs/assets/js/50.1b516ac1.js"><link rel="prefetch" href="/docs/assets/js/51.dd6e884f.js"><link rel="prefetch" href="/docs/assets/js/52.06ecf575.js"><link rel="prefetch" href="/docs/assets/js/53.18160f00.js"><link rel="prefetch" href="/docs/assets/js/54.53e6959c.js"><link rel="prefetch" href="/docs/assets/js/55.6d177f20.js"><link rel="prefetch" href="/docs/assets/js/56.16099169.js"><link rel="prefetch" href="/docs/assets/js/57.767a8adc.js"><link rel="prefetch" href="/docs/assets/js/58.61f61563.js"><link rel="prefetch" href="/docs/assets/js/59.80bd23aa.js"><link rel="prefetch" href="/docs/assets/js/6.a8391b77.js"><link rel="prefetch" href="/docs/assets/js/60.a6ba1e81.js"><link rel="prefetch" href="/docs/assets/js/61.8cbb2e0f.js"><link rel="prefetch" href="/docs/assets/js/62.27ad5fd9.js"><link rel="prefetch" href="/docs/assets/js/7.a7879395.js"><link rel="prefetch" href="/docs/assets/js/8.ce81400e.js"><link rel="prefetch" href="/docs/assets/js/9.428519ae.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.684dd12f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Geeno's Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link router-link-exact-active router-link-active">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link router-link-exact-active router-link-active">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>aspnetcore</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/bakend/develop/aspnetcore/" class="active sidebar-link">开发整理问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#iconfiguration" class="sidebar-link">IConfiguration</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#di-注入详解" class="sidebar-link">DI 注入详解</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#netcore3-1-改-razorpage-需要重新编译解决" class="sidebar-link">netcore3.1 改 razorpage 需要重新编译解决</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#unittest-调试-webapi" class="sidebar-link">UnitTest 调试 WebAPI</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#webapi-全局的-exception-捕捉" class="sidebar-link">WebAPI 全局的 exception 捕捉</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#aspnetcore3-1json-日期格式-utc-异常处理" class="sidebar-link">AspnetCore3.1JSON 日期格式 UTC 异常处理</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#获取-webapi-请求-body-内容" class="sidebar-link">获取 WEBAPI 请求 Body 内容</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#webapi-序列化" class="sidebar-link">WebApi 序列化</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#apsnetcore-编码处理" class="sidebar-link">ApsNetCore 编码处理</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/develop/aspnetcore/#https-接口调用" class="sidebar-link">Https 接口调用</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="开发整理问题"><a href="#开发整理问题" class="header-anchor">#</a> 开发整理问题</h1> <h2 id="iconfiguration"><a href="#iconfiguration" class="header-anchor">#</a> IConfiguration</h2> <p>1.<code>配置文件值读取的顺序</code></p> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/*
+CLI &gt; 环境变量 &gt; appsettings.xx.json &gt; appsettings.json
+*/</span>
+<span class="token comment">//源代码解析</span>
+<span class="token class-name">IHostingEnvironment</span> hostingEnvironment <span class="token operator">=</span> hostingContext<span class="token punctuation">.</span>HostingEnvironment<span class="token punctuation">;</span>
+config<span class="token punctuation">.</span><span class="token function">AddJsonFile</span><span class="token punctuation">(</span><span class="token string">&quot;appsettings.json&quot;</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">optional</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">reloadOnChange</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">AddJsonFile</span><span class="token punctuation">(</span><span class="token string">&quot;appsettings.&quot;</span> <span class="token operator">+</span> hostingEnvironment<span class="token punctuation">.</span>EnvironmentName <span class="token operator">+</span> <span class="token string">&quot;.json&quot;</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">optional</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token named-parameter punctuation">reloadOnChange</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>hostingEnvironment<span class="token punctuation">.</span><span class="token function">IsDevelopment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">Assembly</span> assembly <span class="token operator">=</span> Assembly<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">AssemblyName</span><span class="token punctuation">(</span>hostingEnvironment<span class="token punctuation">.</span>ApplicationName<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>assembly <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        config<span class="token punctuation">.</span><span class="token function">AddUserSecrets</span><span class="token punctuation">(</span>assembly<span class="token punctuation">,</span> <span class="token named-parameter punctuation">optional</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+config<span class="token punctuation">.</span><span class="token function">AddEnvironmentVariables</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>args <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span><span class="token function">AddCommandLine</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="di-注入详解"><a href="#di-注入详解" class="header-anchor">#</a> DI 注入详解</h2> <blockquote><p><a href="https://www.cnblogs.com/jesse2013/p/di-in-aspnetcore.html" target="_blank" rel="noopener noreferrer">参考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h2 id="netcore3-1-改-razorpage-需要重新编译解决"><a href="#netcore3-1-改-razorpage-需要重新编译解决" class="header-anchor">#</a> netcore3.1 改 razorpage 需要重新编译解决</h2> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">//1. 安装 Install-Package Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation</span>
+<span class="token comment">//2. 在service进行配置</span>
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">ConfigureServices</span><span class="token punctuation">(</span><span class="token class-name">IServiceCollection</span> services<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    services<span class="token punctuation">.</span><span class="token function">AddRazorPages</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token comment">//这段话就行</span>
+        <span class="token punctuation">.</span><span class="token function">AddRazorRuntimeCompilation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="unittest-调试-webapi"><a href="#unittest-调试-webapi" class="header-anchor">#</a> UnitTest 调试 WebAPI</h2> <blockquote><p><a href="https://www.jianshu.com/p/987b0c2aa40e" target="_blank" rel="noopener noreferrer">参考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">//1. nuget 安装 Microsoft.AspNetCore.TestHost</span>
+<span class="token comment">//2. UnitTest项目增加测试辅助类</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ClientProvider</span><span class="token punctuation">:</span><span class="token type-list"><span class="token class-name">IDisposable</span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">TestServer</span> _server<span class="token punctuation">;</span>
+    <span class="token keyword">public</span>  <span class="token return-type class-name">HttpClient</span> Client <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">private</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token function">ClientProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">//UseStartup&lt;Startup&gt; 对应webapi的startup类就行了</span>
+        _server <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">TestServer</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">WebHostBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method"><span class="token function">UseStartup</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>Startup<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Client <span class="token operator">=</span> _server<span class="token punctuation">.</span><span class="token function">CreateClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        _server<span class="token punctuation">?.</span><span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Client<span class="token punctuation">?.</span><span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//3. 测试调用</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">EmployeeApiIntergrationTests</span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Fact</span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task</span> <span class="token function">Test_GetAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ClientProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Client<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token class-name"><span class="token keyword">var</span></span> response <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token function">GetAsync</span><span class="token punctuation">(</span><span class="token string">&quot;/api/employee&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            response<span class="token punctuation">.</span><span class="token function">EnsureSuccessStatusCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Assert<span class="token punctuation">.</span><span class="token function">Equal</span><span class="token punctuation">(</span>HttpStatusCode<span class="token punctuation">.</span>OK<span class="token punctuation">,</span> response<span class="token punctuation">.</span>StatusCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="webapi-全局的-exception-捕捉"><a href="#webapi-全局的-exception-捕捉" class="header-anchor">#</a> WebAPI 全局的 exception 捕捉</h2> <blockquote><p><a href="https://stackoverflow.com/questions/38630076/asp-net-core-web-api-exception-handling" target="_blank" rel="noopener noreferrer">stackoverflow<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://www.talkingdotnet.com/global-exception-handling-in-aspnet-core-webapi/" target="_blank" rel="noopener noreferrer">其他参考 1<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://blog.jonblankenship.com/2020/04/12/global-exception-handling-in-aspnet-core-api/" target="_blank" rel="noopener noreferrer">其他参考 2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">/*
+1. 使用 `exceptionHandler` 去处理
+2. 自己实现一个中间件去处理
+*/</span>
+
+</code></pre></div><h2 id="aspnetcore3-1json-日期格式-utc-异常处理"><a href="#aspnetcore3-1json-日期格式-utc-异常处理" class="header-anchor">#</a> AspnetCore3.1JSON 日期格式 UTC 异常处理</h2> <blockquote><p><a href="https://docs.microsoft.com/zh-cn/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#specify-date-format" target="_blank" rel="noopener noreferrer">参考官网链接--JOSN.Text 和 Json.Net 的迁移<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a><br>
+使用的库是<code>JSON.Net</code>,由于 3.1 没有设置 json 的格式操作的话，默认就是 UTC 的时间格式，所以导致数据呈现不对.<br>
+作为<code>WEBAPI</code>而言的话：<code>JSON.Net</code>是贯穿了整个数据输入和数据输出的规范，所以这个需要花时间去整理下。</p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">//startup.cs里进行如下配置即可</span>
+ services<span class="token punctuation">.</span><span class="token function">AddControllers</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">AddNewtonsoftJson</span><span class="token punctuation">(</span>options<span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token comment">//设置时间格式</span>
+            options<span class="token punctuation">.</span>SerializerSettings<span class="token punctuation">.</span>DateFormatString <span class="token operator">=</span> <span class="token string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="token punctuation">;</span>
+            <span class="token comment">//设置时区</span>
+            options<span class="token punctuation">.</span>SerializerSettings<span class="token punctuation">.</span>DateTimeZoneHandling <span class="token operator">=</span>  Newtonsoft<span class="token punctuation">.</span>Json<span class="token punctuation">.</span>DateTimeZoneHandling<span class="token punctuation">.</span>Local<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//还有一种处理方式使用JSON.Text进行操作，不使用JSON.Net</span>
+<span class="token comment">//startup.cs里进行如下配置即可</span>
+services<span class="token punctuation">.</span><span class="token function">AddControllers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">AddJsonOptions</span><span class="token punctuation">(</span>options<span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    options<span class="token punctuation">.</span>JsonSerializerOptions<span class="token punctuation">.</span>Encoder <span class="token operator">=</span> JavaScriptEncoder<span class="token punctuation">.</span><span class="token function">Create</span><span class="token punctuation">(</span>UnicodeRanges<span class="token punctuation">.</span>All<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    options<span class="token punctuation">.</span>JsonSerializerOptions<span class="token punctuation">.</span>Converters<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">DateTimeConverter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    options<span class="token punctuation">.</span>JsonSerializerOptions<span class="token punctuation">.</span>Converters<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">DateTimeNullableConvert</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DateTimeConverter</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">JsonConverter<span class="token punctuation">&lt;</span>DateTime<span class="token punctuation">&gt;</span></span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name">DateTime</span> <span class="token function">Read</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Utf8JsonReader</span> reader<span class="token punctuation">,</span> <span class="token class-name">Type</span> typeToConvert<span class="token punctuation">,</span> <span class="token class-name">JsonSerializerOptions</span> options<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> DateTime<span class="token punctuation">.</span>TryParse<span class="token class-name"><span class="token punctuation">(</span>reader<span class="token punctuation">.</span>GetString<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token keyword">var</span> dateTime<span class="token punctuation">)</span> <span class="token punctuation">?</span></span> dateTime <span class="token punctuation">:</span> <span class="token keyword">default</span><span class="token punctuation">(</span><span class="token type-expression class-name">DateTime</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Write</span><span class="token punctuation">(</span><span class="token class-name">Utf8JsonWriter</span> writer<span class="token punctuation">,</span> <span class="token class-name">DateTime</span> <span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token class-name">JsonSerializerOptions</span> options<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        writer<span class="token punctuation">.</span><span class="token function">WriteStringValue</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DateTimeNullableConvert</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">JsonConverter<span class="token punctuation">&lt;</span>DateTime<span class="token punctuation">?</span><span class="token punctuation">&gt;</span></span></span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name">DateTime<span class="token punctuation">?</span></span> <span class="token function">Read</span><span class="token punctuation">(</span><span class="token keyword">ref</span> <span class="token class-name">Utf8JsonReader</span> reader<span class="token punctuation">,</span> <span class="token class-name">Type</span> typeToConvert<span class="token punctuation">,</span> <span class="token class-name">JsonSerializerOptions</span> options<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> DateTime<span class="token punctuation">.</span>TryParse<span class="token class-name"><span class="token punctuation">(</span>reader<span class="token punctuation">.</span>GetString<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">out</span> <span class="token keyword">var</span> dateTime<span class="token punctuation">)</span> <span class="token punctuation">?</span></span> dateTime <span class="token punctuation">:</span> <span class="token keyword">default</span><span class="token punctuation">(</span><span class="token type-expression class-name">DateTime<span class="token punctuation">?</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Write</span><span class="token punctuation">(</span><span class="token class-name">Utf8JsonWriter</span> writer<span class="token punctuation">,</span> <span class="token class-name">DateTime<span class="token punctuation">?</span></span> <span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token class-name">JsonSerializerOptions</span> options<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        writer<span class="token punctuation">.</span><span class="token function">WriteStringValue</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">?.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="获取-webapi-请求-body-内容"><a href="#获取-webapi-请求-body-内容" class="header-anchor">#</a> 获取 WEBAPI 请求 Body 内容</h2> <blockquote><p><code>AspnetCore3.1</code> 之后，默认对应的读取 IO 流操作，服务器全部默认禁用<code>同步</code>读取操作:<br>
+Kestrel<br>
+HttpSys<br>
+IIS in-process<br>
+TestServer</p></blockquote> <p><a href="https://www.cnblogs.com/CreateMyself/p/8410686.html" target="_blank" rel="noopener noreferrer">实现增加对应的请求流支持<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a><br> <a href="https://github.com/dotnet/aspnetcore/issues/7644" target="_blank" rel="noopener noreferrer">参考链接-github-issue<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a><br> <a href="https://docs.microsoft.com/zh-cn/dotnet/core/compatibility/2.2-3.1#http-synchronous-io-disabled-in-all-servers" target="_blank" rel="noopener noreferrer">版本 2.2 到 3.1 的更改<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a><br> <a href="https://github.com/dotnet/aspnetcore/issues/8302" target="_blank" rel="noopener noreferrer">IIS 配置同步读取 IO 流<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">//实现同步读取方案</span>
+<span class="token comment">//1.kestrel需要手动启用这个配置, Program.cs</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name">IHostBuilder</span> <span class="token function">CreateHostBuilder</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+    Host<span class="token punctuation">.</span><span class="token function">CreateDefaultBuilder</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">ConfigureWebHostDefaults</span><span class="token punctuation">(</span>webBuilder <span class="token operator">=&gt;</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">//kestrel服务器配置启用同步读取</span>
+            webBuilder<span class="token punctuation">.</span><span class="token function">ConfigureKestrel</span><span class="token punctuation">(</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> options<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+            <span class="token punctuation">{</span>
+                options<span class="token punctuation">.</span>AllowSynchronousIO <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">;</span>
+            webBuilder<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">UseStartup</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>Startup<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//2. IIS, startup.cs</span>
+<span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">ConfigureServices</span><span class="token punctuation">(</span><span class="token class-name">IServiceCollection</span> services<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddScoped</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IGreeting<span class="token punctuation">,</span> Greeting<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//IIS启用同步读取流</span>
+    services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Configure</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IISServerOptions<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span>options <span class="token operator">=&gt;</span>
+    <span class="token punctuation">{</span>
+        options<span class="token punctuation">.</span>AllowSynchronousIO <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    services<span class="token punctuation">.</span><span class="token function">AddControllers</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">//.AddXmlSerializerFormatters();</span>
+        <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//实现异步读取方案</span>
+
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpPost</span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task<span class="token punctuation">&lt;</span>IActionResult<span class="token punctuation">&gt;</span></span> <span class="token function">TestQimenReqXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> contents <span class="token operator">=</span> <span class="token keyword">string</span><span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+    <span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">StreamReader</span><span class="token punctuation">(</span>Request<span class="token punctuation">.</span>Body<span class="token punctuation">,</span> Encoding<span class="token punctuation">.</span>UTF8<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        contents <span class="token operator">=</span> <span class="token keyword">await</span> reader<span class="token punctuation">.</span><span class="token function">ReadToEndAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> stu <span class="token operator">=</span> topsdk_net_core<span class="token punctuation">.</span>Util<span class="token punctuation">.</span>XmlHelper<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">XmlDeserialize</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>Student<span class="token punctuation">&gt;</span></span></span><span class="token punctuation">(</span>contents<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">Content</span><span class="token punctuation">(</span>contents<span class="token punctuation">,</span> <span class="token string">&quot;text/xml&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="webapi-序列化"><a href="#webapi-序列化" class="header-anchor">#</a> WebApi 序列化</h2> <ul><li><p>支持请求和序列化 XML
+<a href="https://www.bbsmax.com/A/amd0NXGDJg/" target="_blank" rel="noopener noreferrer">参考链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">//1. 引用包</span>
+<span class="token comment">//Microsoft.AspNetCore.Mvc.Formatters.Xml</span>
+
+<span class="token comment">//2. startup.cs配置</span>
+services<span class="token punctuation">.</span><span class="token function">AddMvc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetCompatibilityVersion</span><span class="token punctuation">(</span>CompatibilityVersion<span class="token punctuation">.</span>Version_2_2<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">AddXmlSerializerFormatters</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//3. 请求XML格式进行反序列化</span>
+<span class="token comment">//响应</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpPost</span></span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Produces</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">&quot;application/xml&quot;</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token return-type class-name">Student</span> <span class="token function">TestQimenRps</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> stu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Student</span>
+    <span class="token punctuation">{</span>
+        Age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        Name <span class="token operator">=</span> <span class="token string">&quot;Jack&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> stu<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//请求转为实体</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpPost</span></span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Consumes</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">&quot;application/xml&quot;</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token return-type class-name">Student</span> <span class="token function">TestQimenReq</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">FromBody</span></span><span class="token punctuation">]</span><span class="token class-name">Student</span> student<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> stu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Student</span>
+    <span class="token punctuation">{</span>
+        Age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        Name <span class="token operator">=</span> <span class="token string">&quot;Jack&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> stu<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//JSON格式保持原样</span>
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">HttpPost</span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token return-type class-name">Student</span> <span class="token function">TestQimenReqJson</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">FromBody</span></span><span class="token punctuation">]</span> <span class="token class-name">Student</span> student<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name"><span class="token keyword">var</span></span> stu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Student</span>
+    <span class="token punctuation">{</span>
+        Age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">,</span>
+        Name <span class="token operator">=</span> <span class="token string">&quot;Jack&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> stu<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul> <h2 id="apsnetcore-编码处理"><a href="#apsnetcore-编码处理" class="header-anchor">#</a> ApsNetCore 编码处理</h2> <blockquote><p>根据 <code>System.Text.Encoding.CodePages</code> nuget 主页 的描述，这个包能为程序提供 <code>Windows-1252, Shift-JIS, and GB2312</code> 三种编码。</p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">//1. 安装nuget包</span>
+<span class="token comment">//System.Text.Encoding.CodePages</span>
+
+<span class="token comment">//2.在使用的地方，优先执行注册CodePages的操作，当然可以考虑直接配置全局默认直接注册</span>
+System<span class="token punctuation">.</span>Text<span class="token punctuation">.</span>Encoding<span class="token punctuation">.</span>RegisterProvider <span class="token punctuation">(</span>System<span class="token punctuation">.</span>Text<span class="token punctuation">.</span>CodePagesEncodingProvider<span class="token punctuation">.</span>Instance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="https-接口调用"><a href="#https-接口调用" class="header-anchor">#</a> Https 接口调用</h2> <blockquote><p>出现<code>基础连接已关闭的错误</code>,<a href="https://www.cnblogs.com/farb/p/HttpRequestProblem.html" target="_blank" rel="noopener noreferrer">参考链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a><br> <a href="https://stackoverflow.com/questions/47269609/system-net-securityprotocoltype-tls12-definition-not-found" target="_blank" rel="noopener noreferrer">stackoverflow<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token comment">//注意FrameWork的框架4.5或以上才支持</span>
+ServicePointManager<span class="token punctuation">.</span>SecurityProtocol <span class="token operator">=</span> SecurityProtocolType<span class="token punctuation">.</span>Ssl3 <span class="token operator">|</span> SecurityProtocolType<span class="token punctuation">.</span>Tls12 <span class="token operator">|</span> SecurityProtocolType<span class="token punctuation">.</span>Tls11 <span class="token operator">|</span> SecurityProtocolType<span class="token punctuation">.</span>Tls<span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">Monday, November 9, 2020 8:49 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/docs/assets/js/app.e2bd7cff.js" defer></script><script src="/docs/assets/js/2.e252a344.js" defer></script><script src="/docs/assets/js/13.37bccccc.js" defer></script><script src="/docs/assets/js/3.cd7f7020.js" defer></script>
+  </body>
+</html>

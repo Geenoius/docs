@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sqlserver | Geeno&#39;s Docs</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/docs/img/apple-touch-icon-152x152.png">
+    <link rel="manifest" href="/docs/manifest.json">
+    <link rel="apple-touch-icon" href="/docs/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/docs/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/docs/assets/css/0.styles.684dd12f.css" as="style"><link rel="preload" href="/docs/assets/js/app.e2bd7cff.js" as="script"><link rel="preload" href="/docs/assets/js/2.e252a344.js" as="script"><link rel="preload" href="/docs/assets/js/12.7b4de923.js" as="script"><link rel="preload" href="/docs/assets/js/3.cd7f7020.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.ab46e7c8.js"><link rel="prefetch" href="/docs/assets/js/11.bdd1bcbb.js"><link rel="prefetch" href="/docs/assets/js/13.37bccccc.js"><link rel="prefetch" href="/docs/assets/js/14.ccde06f7.js"><link rel="prefetch" href="/docs/assets/js/15.b23050ba.js"><link rel="prefetch" href="/docs/assets/js/16.4d12f0d2.js"><link rel="prefetch" href="/docs/assets/js/17.861e12b5.js"><link rel="prefetch" href="/docs/assets/js/18.f0faa1d7.js"><link rel="prefetch" href="/docs/assets/js/19.0834b430.js"><link rel="prefetch" href="/docs/assets/js/20.72656569.js"><link rel="prefetch" href="/docs/assets/js/21.8ca58c04.js"><link rel="prefetch" href="/docs/assets/js/22.234b0a3f.js"><link rel="prefetch" href="/docs/assets/js/23.66c53c46.js"><link rel="prefetch" href="/docs/assets/js/24.5d15bf02.js"><link rel="prefetch" href="/docs/assets/js/25.d5fdf813.js"><link rel="prefetch" href="/docs/assets/js/26.d33c7f1e.js"><link rel="prefetch" href="/docs/assets/js/27.1a1589e4.js"><link rel="prefetch" href="/docs/assets/js/28.786bd896.js"><link rel="prefetch" href="/docs/assets/js/29.bd546282.js"><link rel="prefetch" href="/docs/assets/js/30.c5eb2db5.js"><link rel="prefetch" href="/docs/assets/js/31.7205f0f5.js"><link rel="prefetch" href="/docs/assets/js/32.4466c93b.js"><link rel="prefetch" href="/docs/assets/js/33.b47c7c80.js"><link rel="prefetch" href="/docs/assets/js/34.7bbdcb5f.js"><link rel="prefetch" href="/docs/assets/js/35.0028dd26.js"><link rel="prefetch" href="/docs/assets/js/36.7d36e51d.js"><link rel="prefetch" href="/docs/assets/js/37.3f983ca7.js"><link rel="prefetch" href="/docs/assets/js/38.04299ecf.js"><link rel="prefetch" href="/docs/assets/js/39.46bf1693.js"><link rel="prefetch" href="/docs/assets/js/4.c46d92ce.js"><link rel="prefetch" href="/docs/assets/js/40.2dfce58d.js"><link rel="prefetch" href="/docs/assets/js/41.567bc6b7.js"><link rel="prefetch" href="/docs/assets/js/42.2221e8d4.js"><link rel="prefetch" href="/docs/assets/js/43.3a5fa5d7.js"><link rel="prefetch" href="/docs/assets/js/44.25c83621.js"><link rel="prefetch" href="/docs/assets/js/45.8f7fe9e5.js"><link rel="prefetch" href="/docs/assets/js/46.6117f0ab.js"><link rel="prefetch" href="/docs/assets/js/47.4ed69f2e.js"><link rel="prefetch" href="/docs/assets/js/48.4aa7ddad.js"><link rel="prefetch" href="/docs/assets/js/49.81f15faf.js"><link rel="prefetch" href="/docs/assets/js/5.38b3e286.js"><link rel="prefetch" href="/docs/assets/js/50.1b516ac1.js"><link rel="prefetch" href="/docs/assets/js/51.dd6e884f.js"><link rel="prefetch" href="/docs/assets/js/52.06ecf575.js"><link rel="prefetch" href="/docs/assets/js/53.18160f00.js"><link rel="prefetch" href="/docs/assets/js/54.53e6959c.js"><link rel="prefetch" href="/docs/assets/js/55.6d177f20.js"><link rel="prefetch" href="/docs/assets/js/56.16099169.js"><link rel="prefetch" href="/docs/assets/js/57.767a8adc.js"><link rel="prefetch" href="/docs/assets/js/58.61f61563.js"><link rel="prefetch" href="/docs/assets/js/59.80bd23aa.js"><link rel="prefetch" href="/docs/assets/js/6.a8391b77.js"><link rel="prefetch" href="/docs/assets/js/60.a6ba1e81.js"><link rel="prefetch" href="/docs/assets/js/61.8cbb2e0f.js"><link rel="prefetch" href="/docs/assets/js/62.27ad5fd9.js"><link rel="prefetch" href="/docs/assets/js/7.a7879395.js"><link rel="prefetch" href="/docs/assets/js/8.ce81400e.js"><link rel="prefetch" href="/docs/assets/js/9.428519ae.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.684dd12f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Geeno's Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link router-link-exact-active router-link-active">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/docs/software/" class="nav-link">
+  Software
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="FrontEnd" class="dropdown-title"><span class="title">FrontEnd</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/common/html/" class="nav-link">
+  Html
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/common/skill/" class="nav-link">
+  Skill
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Extra
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/frontend/extra/langSpec/" class="nav-link">
+  LangSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/framework/" class="nav-link">
+  Framework
+</a></li><li class="dropdown-subitem"><a href="/docs/frontend/extra/plugins/" class="nav-link">
+  Plugins
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Bakend" class="dropdown-title"><span class="title">Bakend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Develop
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/develop/aspnetcore/" class="nav-link">
+  AspNetCore
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/csharpspec/" class="nav-link">
+  CsharSpec
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/design/" class="nav-link">
+  Design
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/develop/linq/" class="nav-link">
+  Linq
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Database
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/database/mysql/" class="nav-link">
+  Mysql
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlite/" class="nav-link">
+  Sqlite
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/database/sqlserver/" class="nav-link router-link-exact-active router-link-active">
+  Sqlserver
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Nuget
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/bakend/nuget/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-subitem"><a href="/docs/bakend/nuget/fullspec/" class="nav-link">
+  FullSpec
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><span class="title">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Common
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/common/windows-usage/" class="nav-link">
+  Usage
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/regedit/" class="nav-link">
+  Regedit
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/common/systemperformance/cdisk/" class="nav-link">
+  SystemPerformance
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Tools
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/tools/wordEdit/" class="nav-link">
+  WordEdit
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CommandLine
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/windows/commandline/bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/dos/" class="nav-link">
+  Dos
+</a></li><li class="dropdown-subitem"><a href="/docs/windows/commandline/powershell/" class="nav-link">
+  PowerShell
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Version" class="dropdown-title"><span class="title">Version</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/version/common/" class="nav-link">
+  Common
+</a></li><li class="dropdown-item"><!----> <a href="/docs/version/git/" class="nav-link">
+  Git
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>sqlserver</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/bakend/database/sqlserver/" class="active sidebar-link">sqlserver</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/bakend/database/sqlserver/#upate" class="sidebar-link">Upate</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/database/sqlserver/#try-catch" class="sidebar-link">Try-Catch</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/database/sqlserver/#使用程序集" class="sidebar-link">使用程序集</a></li><li class="sidebar-sub-header"><a href="/docs/bakend/database/sqlserver/#数据导入" class="sidebar-link">数据导入</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sqlserver"><a href="#sqlserver" class="header-anchor">#</a> sqlserver</h1> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>整理常用的 Sql 语法使用。</p></div> <h2 id="upate"><a href="#upate" class="header-anchor">#</a> Upate</h2> <p>1.根据<code>表关联</code>的查询结果进行批量更新数据</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">UPDATE</span> Production<span class="token punctuation">.</span>BillOfMaterials
+<span class="token keyword">SET</span> PerAssemblyQty <span class="token operator">=</span> c<span class="token punctuation">.</span>PerAssemblyQty <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token keyword">FROM</span> Production<span class="token punctuation">.</span>BillOfMaterials <span class="token keyword">AS</span> c
+<span class="token keyword">JOIN</span> Parts <span class="token keyword">AS</span> d <span class="token keyword">ON</span> c<span class="token punctuation">.</span>ProductAssemblyID <span class="token operator">=</span> d<span class="token punctuation">.</span>AssemblyID
+<span class="token keyword">WHERE</span> d<span class="token punctuation">.</span>ComponentLevel <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></div><p>2.根据<code>with cte</code>的查询结果进行批量更新数据</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">USE</span> AdventureWorks2012<span class="token punctuation">;</span>
+GO
+<span class="token keyword">WITH</span> Parts<span class="token punctuation">(</span>AssemblyID<span class="token punctuation">,</span> ComponentID<span class="token punctuation">,</span> PerAssemblyQty<span class="token punctuation">,</span> EndDate<span class="token punctuation">,</span> ComponentLevel<span class="token punctuation">)</span> <span class="token keyword">AS</span>
+<span class="token punctuation">(</span>
+    <span class="token keyword">SELECT</span> b<span class="token punctuation">.</span>ProductAssemblyID<span class="token punctuation">,</span> b<span class="token punctuation">.</span>ComponentID<span class="token punctuation">,</span> b<span class="token punctuation">.</span>PerAssemblyQty<span class="token punctuation">,</span>
+        b<span class="token punctuation">.</span>EndDate<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token keyword">AS</span> ComponentLevel
+    <span class="token keyword">FROM</span> Production<span class="token punctuation">.</span>BillOfMaterials <span class="token keyword">AS</span> b
+    <span class="token keyword">WHERE</span> b<span class="token punctuation">.</span>ProductAssemblyID <span class="token operator">=</span> <span class="token number">800</span>
+          <span class="token operator">AND</span> b<span class="token punctuation">.</span>EndDate <span class="token operator">IS</span> <span class="token boolean">NULL</span>
+    <span class="token keyword">UNION</span> <span class="token keyword">ALL</span>
+    <span class="token keyword">SELECT</span> bom<span class="token punctuation">.</span>ProductAssemblyID<span class="token punctuation">,</span> bom<span class="token punctuation">.</span>ComponentID<span class="token punctuation">,</span> p<span class="token punctuation">.</span>PerAssemblyQty<span class="token punctuation">,</span>
+        bom<span class="token punctuation">.</span>EndDate<span class="token punctuation">,</span> ComponentLevel <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token keyword">FROM</span> Production<span class="token punctuation">.</span>BillOfMaterials <span class="token keyword">AS</span> bom
+        <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Parts <span class="token keyword">AS</span> p
+        <span class="token keyword">ON</span> bom<span class="token punctuation">.</span>ProductAssemblyID <span class="token operator">=</span> p<span class="token punctuation">.</span>ComponentID
+        <span class="token operator">AND</span> bom<span class="token punctuation">.</span>EndDate <span class="token operator">IS</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span>
+<span class="token comment">--关联其他表进行数据更新</span>
+<span class="token keyword">UPDATE</span> Production<span class="token punctuation">.</span>BillOfMaterials
+<span class="token keyword">SET</span> PerAssemblyQty <span class="token operator">=</span> c<span class="token punctuation">.</span>PerAssemblyQty <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token keyword">FROM</span> Production<span class="token punctuation">.</span>BillOfMaterials <span class="token keyword">AS</span> c
+<span class="token keyword">JOIN</span> Parts <span class="token keyword">AS</span> d <span class="token keyword">ON</span> c<span class="token punctuation">.</span>ProductAssemblyID <span class="token operator">=</span> d<span class="token punctuation">.</span>AssemblyID
+<span class="token keyword">WHERE</span> d<span class="token punctuation">.</span>ComponentLevel <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="try-catch"><a href="#try-catch" class="header-anchor">#</a> Try-Catch</h2> <blockquote><p><a href="https://docs.microsoft.com/zh-cn/sql/t-sql/language-elements/try-catch-transact-sql?view=sql-server-ver15" target="_blank" rel="noopener noreferrer">参考链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- Check to see whether this stored procedure exists.</span>
+<span class="token keyword">IF</span> OBJECT_ID <span class="token punctuation">(</span>N<span class="token string">'usp_GetErrorInfo'</span><span class="token punctuation">,</span> N<span class="token string">'P'</span><span class="token punctuation">)</span> <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+    <span class="token keyword">DROP</span> <span class="token keyword">PROCEDURE</span> usp_GetErrorInfo<span class="token punctuation">;</span>
+GO
+
+<span class="token comment">-- Create procedure to retrieve error information.</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">PROCEDURE</span> usp_GetErrorInfo
+<span class="token keyword">AS</span>
+    <span class="token keyword">SELECT</span>
+         ERROR_NUMBER<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ErrorNumber
+        <span class="token punctuation">,</span>ERROR_SEVERITY<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ErrorSeverity
+        <span class="token punctuation">,</span>ERROR_STATE<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ErrorState
+        <span class="token punctuation">,</span>ERROR_LINE <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ErrorLine
+        <span class="token punctuation">,</span>ERROR_PROCEDURE<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ErrorProcedure
+        <span class="token punctuation">,</span>ERROR_MESSAGE<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> ErrorMessage<span class="token punctuation">;</span>
+GO
+
+<span class="token comment">-- SET XACT_ABORT ON will cause the transaction to be uncommittable</span>
+<span class="token comment">-- when the constraint violation occurs.</span>
+<span class="token keyword">SET</span> XACT_ABORT <span class="token keyword">ON</span><span class="token punctuation">;</span>
+
+<span class="token keyword">BEGIN</span> TRY
+    <span class="token keyword">BEGIN</span> <span class="token keyword">TRANSACTION</span><span class="token punctuation">;</span>
+        <span class="token comment">-- A FOREIGN KEY constraint exists on this table. This</span>
+        <span class="token comment">-- statement will generate a constraint violation error.</span>
+        <span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> Production<span class="token punctuation">.</span>Product
+            <span class="token keyword">WHERE</span> ProductID <span class="token operator">=</span> <span class="token number">980</span><span class="token punctuation">;</span>
+
+    <span class="token comment">-- If the DELETE statement succeeds, commit the transaction.</span>
+    <span class="token keyword">COMMIT</span> <span class="token keyword">TRANSACTION</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span> TRY
+<span class="token keyword">BEGIN</span> CATCH
+    <span class="token comment">-- Execute error retrieval routine.</span>
+    <span class="token keyword">EXECUTE</span> usp_GetErrorInfo<span class="token punctuation">;</span>
+
+    <span class="token comment">-- Test XACT_STATE:</span>
+        <span class="token comment">-- If 1, the transaction is committable.</span>
+        <span class="token comment">-- If -1, the transaction is uncommittable and should</span>
+        <span class="token comment">--     be rolled back.</span>
+        <span class="token comment">-- XACT_STATE = 0 means that there is no transaction and</span>
+        <span class="token comment">--     a commit or rollback operation would generate an error.</span>
+
+    <span class="token comment">-- Test whether the transaction is uncommittable.</span>
+    <span class="token keyword">IF</span> <span class="token punctuation">(</span>XACT_STATE<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+    <span class="token keyword">BEGIN</span>
+        <span class="token keyword">PRINT</span>
+            N<span class="token string">'The transaction is in an uncommittable state.'</span> <span class="token operator">+</span>
+            <span class="token string">'Rolling back transaction.'</span>
+        <span class="token keyword">ROLLBACK</span> <span class="token keyword">TRANSACTION</span><span class="token punctuation">;</span>
+    <span class="token keyword">END</span><span class="token punctuation">;</span>
+
+    <span class="token comment">-- Test whether the transaction is committable.</span>
+    <span class="token keyword">IF</span> <span class="token punctuation">(</span>XACT_STATE<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">BEGIN</span>
+        <span class="token keyword">PRINT</span>
+            N<span class="token string">'The transaction is committable.'</span> <span class="token operator">+</span>
+            <span class="token string">'Committing transaction.'</span>
+        <span class="token keyword">COMMIT</span> <span class="token keyword">TRANSACTION</span><span class="token punctuation">;</span>
+    <span class="token keyword">END</span><span class="token punctuation">;</span>
+<span class="token keyword">END</span> CATCH<span class="token punctuation">;</span>
+GO
+</code></pre></div><h2 id="使用程序集"><a href="#使用程序集" class="header-anchor">#</a> 使用程序集</h2> <blockquote><p><a href="https://docs.microsoft.com/zh-cn/sql/relational-databases/clr-integration/database-objects/getting-started-with-clr-integration?view=sql-server-2017" target="_blank" rel="noopener noreferrer">参考链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p>1.<code>所需命名空间</code></p> <p>开发基本 CLR 数据库对象所需的组件随一起安装 SQL Server 。 CLR 集成功能在称作 system.data.dll 的程序集中公开，该程序集是 .NET Framework 的一部分。 该程序集还在全局程序集缓存 (GAC) 以及 .NET Framework 目录中提供。 对此程序集的引用通常由命令行工具和 Microsoft Visual Studio 自动添加，因此无需手动添加它。</p> <p>system.data.dll 程序集包含以下命名空间，这些命名空间是编译 CLR 数据库对象所必需的：</p> <ul><li><code>System.Data</code></li> <li><code>System.Data.Sql</code></li> <li><code>Microsoft.SqlServer.Server</code></li> <li><code>System.Data.SqlTypes</code></li></ul> <p>提示</p> <p>支持在 Linux 上加载 CLR 数据库对象，但必须用 .NET Framework 生成它们（SQL Server CLR 集成不支持 .NET Core）。 此外，Linux 不支持具有 EXTERNAL_ACCESS 或 UNSAFE 权限集的 CLR 程序集。</p> <p>2.<code>撰写一个简单的“Hello World”存储过程</code></p> <p>将以下 Visual C# 或 Microsoft Visual Basic 代码复制并粘贴到某一文本编辑器中，并且将其保存在名为“helloworld.cs”或“helloworld.vb”的文件中。</p> <p>C#复制</p> <div class="language-csharp extra-class"><pre class="language-csharp"><code><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Data</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>SqlServer<span class="token punctuation">.</span>Server</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>SqlTypes</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorldProc</span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">Microsoft<span class="token punctuation">.</span>SqlServer<span class="token punctuation">.</span>Server<span class="token punctuation">.</span>SqlProcedure</span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">HelloWorld</span><span class="token punctuation">(</span><span class="token keyword">out</span> <span class="token class-name"><span class="token keyword">string</span></span> text<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        SqlContext<span class="token punctuation">.</span>Pipe<span class="token punctuation">.</span><span class="token function">Send</span><span class="token punctuation">(</span><span class="token string">&quot;Hello world!&quot;</span> <span class="token operator">+</span> Environment<span class="token punctuation">.</span>NewLine<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        text <span class="token operator">=</span> <span class="token string">&quot;Hello world!&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这一简单的程序包含针对公共类的单个静态方法。 此方法使用两个新类**<a href="https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx" target="_blank" rel="noopener noreferrer">SqlContext<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>** 和**<a href="https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx" target="_blank" rel="noopener noreferrer">SqlPipe<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>**，创建托管数据库对象以输出简单的短信。 此方法还将字符串“Hello world!”指派 为某一输出参数的值。 此方法可以声明为 SQL Server 中的存储过程，然后采用与 Transact-SQL 存储过程相同的方式运行。</p> <p>将此程序编译为库，将其加载到 SQL Server 中，并将其作为存储过程运行。</p> <p>3.<code>编译 &quot;Hello World&quot; 存储过程</code></p> <p>SQL Server 默认情况下将安装 Microsoft .NET Framework 再分发文件。 这些文件包括 csc.exe 和 vbc.exe，它们是用于 Visual C# 和 Visual Basic 程序的命令行编译器。 为了编译我们的示例，您必须修改路径变量以指向包含 csc.exe 或 vbc.exe 的目录。 下面是 .NET Framework 的默认安装路径。</p> <div class="language-txt extra-class"><pre class="language-text"><code>C:\Windows\Microsoft.NET\Framework\(version)
+</code></pre></div><p>Version 包含已安装 .NET Framework 可再发行组件的版本号。 例如：</p> <div class="language-txt extra-class"><pre class="language-text"><code>C:\Windows\Microsoft.NET\Framework\v4.6.1
+</code></pre></div><p>一旦将 .NET Framework 目录添加到路径后，您可以使用以下命令将该存储过程示例编译到某一程序集中。 <strong>/Target</strong>选项可用于将其编译为程序集。</p> <p>对于 Visual C# 源文件：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token variable">$csc</span> /target:library helloworld.cs
+</code></pre></div><p>对于 Visual Basic 源文件：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token variable">$vbc</span> /target:library helloworld.vb
+</code></pre></div><p>以上命令使用 /target 选项启动 Visual C# 或 Visual Basic 编译器，以指定生成库 DLL。</p> <p>4.<code>在 SQL Server 中加载并运行“Hello World”存储过程</code></p> <p>一旦该存储过程示例成功编译后，就可以在 SQL Server 中测试它。 为此，打开 SQL Server Management Studio 并创建一个新查询，将其连接到适合的测试数据库（例如，AdventureWorks 示例数据库）。</p> <p>在 SQL Server 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以通过使用<strong>sp_configure</strong>系统存储过程来启用 CLR 代码。 有关详细信息，请参阅 <a href="https://docs.microsoft.com/zh-cn/sql/relational-databases/clr-integration/clr-integration-enabling?view=sql-server-2017" target="_blank" rel="noopener noreferrer">Enabling CLR Integration<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <p>我们将需要创建该程序集，以便可以访问该存储过程。 对于此示例，我们将假定您已在 C:\ 目录中创建了 helloworld.dll 程序集。 将以下 Transact-SQL 语句添加到您的查询中。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token variable">$CREATE</span> ASSEMBLY helloworld from <span class="token string">'c:\helloworld.dll'</span> WITH PERMISSION_SET <span class="token operator">=</span> SAFE
+</code></pre></div><p>一旦创建了该程序集后，我们现在就可以通过使用 create procedure 语句访问 HelloWorld 方法。 我们将存储过程称为“hello”：</p> <p>SQL 复制</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">CREATE</span> <span class="token keyword">PROCEDURE</span> hello
+<span class="token variable">@i</span> <span class="token keyword">nchar</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span> OUTPUT
+<span class="token keyword">AS</span>
+EXTERNAL NAME helloworld<span class="token punctuation">.</span>HelloWorldProc<span class="token punctuation">.</span>HelloWorld
+<span class="token comment">-- if the HelloWorldProc class is inside a namespace (called MyNS),</span>
+<span class="token comment">-- the last line in the create procedure statement would be</span>
+<span class="token comment">-- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld</span>
+</code></pre></div><p>一旦创建该存储过程后，就可以像用 Transact-SQL 编写的普通存储过程一样运行该存储过程。 运行以下命令：</p> <p>SQL 复制</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">DECLARE</span> <span class="token variable">@J</span> <span class="token keyword">nchar</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span>
+<span class="token keyword">EXEC</span> hello <span class="token variable">@J</span> <span class="token keyword">out</span>
+<span class="token keyword">PRINT</span> <span class="token variable">@J</span>
+</code></pre></div><p>这将在 SQL Server Management Studio 消息窗口中导致以下输出。</p> <p>复制</p> <div class="language-txt extra-class"><pre class="language-text"><code>Hello world!
+Hello world!
+</code></pre></div><p>5.<code>删除“Hello World”存储过程示例</code></p> <p>在您完成该存储过程示例的运行后，可以从测试数据库中删除该过程和程序集。</p> <p>首先，使用 drop procedure 命令删除该存储过程。</p> <p>SQL 复制</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> <span class="token punctuation">(</span><span class="token keyword">SELECT</span> name <span class="token keyword">FROM</span> sysobjects <span class="token keyword">WHERE</span> name <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">)</span>
+   <span class="token keyword">drop</span> <span class="token keyword">procedure</span> hello
+</code></pre></div><p>一旦该存储过程删除后，就可以删除包含示例代码的程序集。</p> <p>SQL 复制</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">IF</span> <span class="token keyword">EXISTS</span> <span class="token punctuation">(</span><span class="token keyword">SELECT</span> name <span class="token keyword">FROM</span> sys<span class="token punctuation">.</span>assemblies <span class="token keyword">WHERE</span> name <span class="token operator">=</span> <span class="token string">'helloworld'</span><span class="token punctuation">)</span>
+   <span class="token keyword">drop</span> assembly helloworld
+</code></pre></div><h2 id="数据导入"><a href="#数据导入" class="header-anchor">#</a> 数据导入</h2> <blockquote><p><a href="https://docs.microsoft.com/zh-cn/sql/relational-databases/import-export/import-data-from-excel-to-sql?view=sql-server-ver15#prerequisite---save-excel-data-as-text" target="_blank" rel="noopener noreferrer">参考链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <p>有几种方式，直接导入<code>excel(xls,xlsx,csv)</code>,<code>BCP</code>,<code>BuilkInsert</code>。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">Monday, August 10, 2020 8:27 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/docs/assets/js/app.e2bd7cff.js" defer></script><script src="/docs/assets/js/2.e252a344.js" defer></script><script src="/docs/assets/js/12.7b4de923.js" defer></script><script src="/docs/assets/js/3.cd7f7020.js" defer></script>
+  </body>
+</html>
